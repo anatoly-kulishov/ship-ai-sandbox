@@ -1,71 +1,31 @@
 """01 · Note sorter — LLM as a typed function.
 
-Skill: system prompt + JSON schema + Pydantic validation,
-so the model returns data your frontend/DB can trust.
-
-GigaChat Freemium: LLM_API_KEY = Authorization key from Studio
-(exchanged for a 30-min access token via OAuth).
+Works with any OpenAI-compatible provider via lib.llm
+(GigaChat OAuth or Ollama at localhost:11434).
 """
 
 from __future__ import annotations
 
 import json
-import os
 import sys
-import uuid
 from enum import Enum
 from pathlib import Path
 
-import requests
-from dotenv import load_dotenv
-from openai import OpenAI
 from pydantic import BaseModel, ValidationError
 
-load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
-AUTH_KEY = (os.getenv("LLM_API_KEY") or "").removeprefix("sk-")
-BASE_URL = os.getenv("LLM_BASE_URL", "https://api.giga.chat/v1")
-MODEL = os.getenv("LLM_MODEL", "GigaChat-2")
-OAUTH_URL = os.getenv(
-    "LLM_OAUTH_URL",
-    "https://ngw.devices.sberbank.ru:9443/api/v2/oauth",
-)
-SCOPE = os.getenv("LLM_SCOPE", "GIGACHAT_API_PERS")
-# ponytail: Минцифры CA often missing on Mac; set LLM_SSL_VERIFY=true after installing certs
-SSL_VERIFY = os.getenv("LLM_SSL_VERIFY", "false").lower() in {"1", "true", "yes"}
+from lib.llm import MODEL, get_client  # noqa: E402
 
-if not AUTH_KEY:
-    raise SystemExit(
-        "Missing LLM_API_KEY — paste GigaChat Authorization key from Studio "
-        "(developers.sber.ru → GigaChat API → Получить ключ)."
-    )
+_client = None
 
 
-def fetch_access_token() -> str:
-    """Exchange Studio Authorization key for a short-lived Bearer token."""
-    response = requests.post(
-        OAUTH_URL,
-        headers={
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Accept": "application/json",
-            "RqUID": str(uuid.uuid4()),
-            "Authorization": f"Basic {AUTH_KEY}",
-        },
-        data={"scope": SCOPE},
-        timeout=30,
-        verify=SSL_VERIFY,
-    )
-    if not response.ok:
-        raise SystemExit(
-            f"GigaChat OAuth failed ({response.status_code}): {response.text[:500]}"
-        )
-    token = response.json().get("access_token")
-    if not token:
-        raise SystemExit(f"GigaChat OAuth: no access_token in {response.text[:500]}")
-    return token
-
-
-client = OpenAI(api_key=fetch_access_token(), base_url=BASE_URL)
+def client():
+    global _client
+    if _client is None:
+        _client = get_client()
+    return _client
 
 
 class Category(str, Enum):
@@ -112,17 +72,15 @@ def categorize_note(user_note: str) -> NoteClassification:
         ],
         "temperature": 0.0,
     }
-    # GigaChat may ignore / reject response_format; prompt + Pydantic is the real contract
     try:
-        response = client.chat.completions.create(
+        response = client().chat.completions.create(
             **kwargs,
             response_format={"type": "json_object"},
         )
     except Exception:
-        response = client.chat.completions.create(**kwargs)
+        response = client().chat.completions.create(**kwargs)
 
     raw = response.choices[0].message.content or "{}"
-    # strip accidental markdown fences
     raw = raw.strip()
     if raw.startswith("```"):
         raw = raw.strip("`")

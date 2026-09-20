@@ -1,0 +1,380 @@
+[
+  {
+    "id": "0025",
+    "name": "barbell bench press",
+    "name_ru": "Жим лёжа со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps"
+  },
+  {
+    "id": "0047",
+    "name": "barbell incline bench press",
+    "name_ru": "Жим лёжа на наклонной скамье со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "shoulders"
+  },
+  {
+    "id": "0033",
+    "name": "barbell decline bench press",
+    "name_ru": "Жим лёжа на наклонной скамье вниз со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps"
+  },
+  {
+    "id": "1255",
+    "name": "barbell decline pullover",
+    "name_ru": "Пуловер вниз головой со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps"
+  },
+  {
+    "id": "0036",
+    "name": "barbell decline wide-grip press",
+    "name_ru": "Жим широким хватом на наклонной скамье вниз",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps"
+  },
+  {
+    "id": "0040",
+    "name": "barbell front raise and pullover",
+    "name_ru": "Подъём вперёд и пуловер со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "deltoids"
+  },
+  {
+    "id": "3017",
+    "name": "barbell pendlay row",
+    "name_ru": "Тяга Пендлея со штангой",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "upper back",
+    "muscle_group": "biceps"
+  },
+  {
+    "id": "0095",
+    "name": "barbell shrug",
+    "name_ru": "Шраги со штангой",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "traps",
+    "muscle_group": "shoulders"
+  },
+  {
+    "id": "1316",
+    "name": "barbell bent arm pullover",
+    "name_ru": "Согнутой рукой пуловер со штангой",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "lats",
+    "muscle_group": "triceps"
+  },
+  {
+    "id": "0027",
+    "name": "barbell bent over row",
+    "name_ru": "Тяга штанги в наклоне",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "upper back",
+    "muscle_group": "biceps"
+  },
+  {
+    "id": "0034",
+    "name": "barbell decline bent arm pullover",
+    "name_ru": "Вниз головой согнутой рукой пуловер со штангой",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "lats",
+    "muscle_group": "triceps"
+  },
+  {
+    "id": "0037",
+    "name": "barbell decline wide-grip pullover",
+    "name_ru": "Вниз головой широким хватом пуловер со штангой",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "lats",
+    "muscle_group": "triceps"
+  },
+  {
+    "id": "0041",
+    "name": "barbell front raise",
+    "name_ru": "Подъём вперёд со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "biceps"
+  },
+  {
+    "id": "0067",
+    "name": "barbell one arm snatch",
+    "name_ru": "Рывок одной рукой со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "traps"
+  },
+  {
+    "id": "0075",
+    "name": "barbell rear delt raise",
+    "name_ru": "Подъём задних дельт со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "traps"
+  },
+  {
+    "id": "0076",
+    "name": "barbell rear delt row",
+    "name_ru": "Тяга задних дельт со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "trapezius"
+  },
+  {
+    "id": "0086",
+    "name": "barbell seated behind head military press",
+    "name_ru": "Армейский жим из-за головы сидя со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps"
+  },
+  {
+    "id": "0087",
+    "name": "barbell seated bradford rocky press",
+    "name_ru": "Сидя жим Брэдфорда-Роки со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps"
+  },
+  {
+    "id": "0031",
+    "name": "barbell curl",
+    "name_ru": "Сгибание на бицепс со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "biceps",
+    "muscle_group": "forearms"
+  },
+  {
+    "id": "0061",
+    "name": "barbell lying triceps extension",
+    "name_ru": "Лёжа разгибание на трицепс со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "shoulders"
+  },
+  {
+    "id": "0023",
+    "name": "barbell alternate biceps curl",
+    "name_ru": "Поочерёдный сгибание на бицепс со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "biceps",
+    "muscle_group": "forearms"
+  },
+  {
+    "id": "2407",
+    "name": "barbell biceps curl (with arm blaster)",
+    "name_ru": "Сгибание на бицепс со штангой (бластером для рук)",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "biceps",
+    "muscle_group": "forearms"
+  },
+  {
+    "id": "0030",
+    "name": "barbell close-grip bench press",
+    "name_ru": "Жим лёжа узким хватом со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "chest"
+  },
+  {
+    "id": "0035",
+    "name": "barbell decline close grip to skull press",
+    "name_ru": "Жим узким хватом на трицепс вниз головой со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "chest"
+  },
+  {
+    "id": "0043",
+    "name": "barbell full squat",
+    "name_ru": "Присед со штангой",
+    "body_part": "upper legs",
+    "equipment": "barbell",
+    "target": "glutes",
+    "muscle_group": "quadriceps"
+  },
+  {
+    "id": "0032",
+    "name": "barbell deadlift",
+    "name_ru": "Становая тяга со штангой",
+    "body_part": "upper legs",
+    "equipment": "barbell",
+    "target": "glutes",
+    "muscle_group": "hamstrings"
+  },
+  {
+    "id": "0085",
+    "name": "barbell romanian deadlift",
+    "name_ru": "Румынская тяга со штангой",
+    "body_part": "upper legs",
+    "equipment": "barbell",
+    "target": "glutes",
+    "muscle_group": "hamstrings"
+  },
+  {
+    "id": "0054",
+    "name": "barbell lunge",
+    "name_ru": "Выпад со штангой",
+    "body_part": "upper legs",
+    "equipment": "barbell",
+    "target": "glutes",
+    "muscle_group": "quadriceps"
+  },
+  {
+    "id": "0042",
+    "name": "barbell front squat",
+    "name_ru": "Фронтальный присед со штангой",
+    "body_part": "upper legs",
+    "equipment": "barbell",
+    "target": "glutes",
+    "muscle_group": "quadriceps"
+  },
+  {
+    "id": "0024",
+    "name": "barbell bench front squat",
+    "name_ru": "Фронтальный присед со штангой со скамьи",
+    "body_part": "upper legs",
+    "equipment": "barbell",
+    "target": "quads",
+    "muscle_group": "hamstrings"
+  },
+  {
+    "id": "0071",
+    "name": "barbell press sit-up",
+    "name_ru": "Жим скручивания со штангой",
+    "body_part": "waist",
+    "equipment": "barbell",
+    "target": "abs",
+    "muscle_group": "shoulders"
+  },
+  {
+    "id": "0084",
+    "name": "barbell rollerout",
+    "name_ru": "Прокат со штангой",
+    "body_part": "waist",
+    "equipment": "barbell",
+    "target": "abs",
+    "muscle_group": "lower back"
+  },
+  {
+    "id": "0083",
+    "name": "barbell rollerout from bench",
+    "name_ru": "Прокат на скамье со штангой",
+    "body_part": "waist",
+    "equipment": "barbell",
+    "target": "abs",
+    "muscle_group": "shoulders"
+  },
+  {
+    "id": "0094",
+    "name": "barbell seated twist",
+    "name_ru": "Сидя скручивание со штангой",
+    "body_part": "waist",
+    "equipment": "barbell",
+    "target": "abs",
+    "muscle_group": "obliques"
+  },
+  {
+    "id": "0096",
+    "name": "barbell side bent v. 2",
+    "name_ru": "Боковой согнутый вариант 2 со штангой",
+    "body_part": "waist",
+    "equipment": "barbell",
+    "target": "abs",
+    "muscle_group": "obliques"
+  },
+  {
+    "id": "2799",
+    "name": "barbell sitted alternate leg raise",
+    "name_ru": "Сидя поочерёдный подъём ног со штангой",
+    "body_part": "waist",
+    "equipment": "barbell",
+    "target": "abs",
+    "muscle_group": "hip flexors"
+  },
+  {
+    "id": "1372",
+    "name": "barbell standing calf raise",
+    "name_ru": "Подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings"
+  },
+  {
+    "id": "1370",
+    "name": "barbell floor calf raise",
+    "name_ru": "На полу подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings"
+  },
+  {
+    "id": "0088",
+    "name": "barbell seated calf raise",
+    "name_ru": "Сидя подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings"
+  },
+  {
+    "id": "1371",
+    "name": "barbell seated calf raise",
+    "name_ru": "Сидя подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings"
+  },
+  {
+    "id": "0108",
+    "name": "barbell standing leg calf raise",
+    "name_ru": "Стоя ногой подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings"
+  },
+  {
+    "id": "0111",
+    "name": "barbell standing rocking leg calf raise",
+    "name_ru": "Стоя качание ногой подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings"
+  }
+]

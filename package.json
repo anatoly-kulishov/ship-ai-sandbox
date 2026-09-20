@@ -1,0 +1,26 @@
+{
+  "name": "ship-ai-sandbox",
+  "private": true,
+  "description": "AI Application Engineer learning sandbox — npm scripts as a launcher",
+  "scripts": {
+    "hub": ".venv/bin/streamlit run app.py --server.port 8501",
+    "01": ".venv/bin/streamlit run 01-note-sorter/app.py --server.port 8502",
+    "02": ".venv/bin/streamlit run 02-tool-use/app.py --server.port 8503",
+    "03": ".venv/bin/streamlit run 03-ollama/app.py --server.port 8504",
+    "04": ".venv/bin/streamlit run 04-gym-plan/app.py --server.port 8505",
+    "05": ".venv/bin/streamlit run 05-rag/app.py --server.port 8506",
+    "06": ".venv/bin/streamlit run 06-gguf/app.py --server.port 8507",
+    "check:01": ".venv/bin/python 01-note-sorter/categorize.py",
+    "check:02": ".venv/bin/python 02-tool-use/agent.py",
+    "check:03": ".venv/bin/python 03-ollama/check.py",
+    "check:04": ".venv/bin/python 04-gym-plan/check.py",
+    "check:05": ".venv/bin/python 05-rag/check.py retrieve",
+    "check:05:build": ".venv/bin/python 05-rag/check.py build",
+    "check:06": ".venv/bin/python 06-gguf/check.py",
+    "ollama:start": "./scripts/start-ollama.sh",
+    "ollama:stop": "./scripts/stop-ollama.sh",
+    "provider:gigachat": ".venv/bin/python scripts/set_provider.py gigachat",
+    "provider:ollama": ".venv/bin/python scripts/set_provider.py ollama",
+    "install:py": ".venv/bin/python -m pip install -r requirements.txt"
+  }
+}

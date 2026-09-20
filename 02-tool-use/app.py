@@ -3,8 +3,14 @@
 from __future__ import annotations
 
 import json
+import sys
+from pathlib import Path
 
 import streamlit as st
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from agent import list_notes, process_note
 
@@ -12,6 +18,8 @@ from agent import list_notes, process_note
 def render() -> None:
     st.title("02 · Tool Use")
     st.caption("Модель вызывает save_note() → запись в SQLite")
+    with st.expander("Конспект урока"):
+        st.markdown((ROOT / "docs" / "02-tool-use.md").read_text(encoding="utf-8"))
 
     note = st.text_area(
         "Текст заметки",

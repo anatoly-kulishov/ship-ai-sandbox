@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "0001",
+    "name": "3/4 sit-up",
+    "name_ru": "Скручивания на 3/4",
+    "body_part": "waist",
+    "equipment": "body weight",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1512",
+    "name": "all fours squad stretch",
+    "name_ru": "Растяжка на четвереньках",
+    "body_part": "upper legs",
+    "equipment": "body weight",
+    "target": "quads",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0007",
+    "name": "alternate lateral pulldown",
+    "name_ru": "Поочерёдная тяга верхнего блока",
+    "body_part": "back",
+    "equipment": "cable",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1368",
+    "name": "ankle circles",
+    "name_ru": "Круги голеностопом",
+    "body_part": "lower legs",
+    "equipment": "body weight",
+    "target": "calves",
+    "muscle_group": "ankle stabilizers",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3294",
+    "name": "archer push up",
+    "name_ru": "Отжимания лучника",
+    "body_part": "chest",
+    "equipment": "body weight",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0018",
+    "name": "assisted standing triceps extension (with towel)",
+    "name_ru": "Стоя разгибание на трицепс с поддержкой (с полотенцем)",
+    "body_part": "upper arms",
+    "equipment": "assisted",
+    "target": "triceps",
+    "muscle_group": "shoulders",
+    "globalPopularity": 15
+  },
+  {
+    "id": "3220",
+    "name": "astride jumps (male)",
+    "name_ru": "Врозь прыжки",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0977",
+    "name": "band front lateral raise",
+    "name_ru": "Разведение в стороны с резинкой",
+    "body_part": "shoulders",
+    "equipment": "band",
+    "target": "delts",
+    "muscle_group": "traps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0994",
+    "name": "band reverse wrist curl",
+    "name_ru": "Обратное сгибание запястий с резинкой",
+    "body_part": "lower arms",
+    "equipment": "band",
+    "target": "forearms",
+    "muscle_group": "forearms",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1403",
+    "name": "neck side stretch",
+    "name_ru": "Шеи боковой растяжка",
+    "body_part": "neck",
+    "equipment": "body weight",
+    "target": "levator scapulae",
+    "muscle_group": "trapezius",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0002",
+    "name": "45° side bend",
+    "name_ru": "Наклон в сторону под 45°",
+    "body_part": "waist",
+    "equipment": "body weight",
+    "target": "abs",
+    "muscle_group": "obliques",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3214",
+    "name": "arms apart circular toe touch (male)",
+    "name_ru": "Руками в стороны круговое касание носков",
+    "body_part": "upper legs",
+    "equipment": "body weight",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3293",
+    "name": "archer pull up",
+    "name_ru": "Подтягивания лучника",
+    "body_part": "back",
+    "equipment": "body weight",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1708",
+    "name": "assisted lying calves stretch",
+    "name_ru": "Растяжка лёжа икр с поддержкой",
+    "body_part": "lower legs",
+    "equipment": "assisted",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 15
+  },
+  {
+    "id": "0009",
+    "name": "assisted chest dip (kneeling)",
+    "name_ru": "Отжимания на брусьях с поддержкой (на коленях)",
+    "body_part": "chest",
+    "equipment": "leverage machine",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0019",
+    "name": "assisted triceps dip (kneeling)",
+    "name_ru": "Трицепса отжимания на брусьях с поддержкой (на коленях)",
+    "body_part": "upper arms",
+    "equipment": "leverage machine",
+    "target": "triceps",
+    "muscle_group": "chest",
+    "globalPopularity": 20
+  },
+  {
+    "id": "3672",
+    "name": "back and forth step",
+    "name_ru": "Шаги вперёд-назад",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0978",
+    "name": "band front raise",
+    "name_ru": "Подъём вперёд с резинкой",
+    "body_part": "shoulders",
+    "equipment": "band",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1016",
+    "name": "band wrist curl",
+    "name_ru": "Сгибание запястий с резинкой",
+    "body_part": "lower arms",
+    "equipment": "band",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0716",
+    "name": "side push neck stretch",
+    "name_ru": "Боковая растяжка шеи с жимом",
+    "body_part": "neck",
+    "equipment": "body weight",
+    "target": "levator scapulae",
+    "muscle_group": "trapezius",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0003",
+    "name": "air bike",
+    "name_ru": "Велосипед с вентилятором",
+    "body_part": "waist",
+    "equipment": "body weight",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1709",
+    "name": "assisted lying glutes stretch",
+    "name_ru": "Растяжка лёжа ягодиц с поддержкой",
+    "body_part": "upper legs",
+    "equipment": "assisted",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 15
+  },
+  {
+    "id": "0015",
+    "name": "assisted parallel close grip pull-up",
+    "name_ru": "Параллельным узким хватом подтягивания с поддержкой",
+    "body_part": "back",
+    "equipment": "leverage machine",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0999",
+    "name": "band single leg calf raise",
+    "name_ru": "На одной подъём ноге на носки с резинкой",
+    "body_part": "lower legs",
+    "equipment": "band",
+    "target": "calves",
+    "muscle_group": "ankles",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1716",
+    "name": "assisted seated pectoralis major stretch with stability ball",
+    "name_ru": "Растяжка грудных сидя с фитболом",
+    "body_part": "chest",
+    "equipment": "assisted",
+    "target": "pectorals",
+    "muscle_group": "shoulders",
+    "globalPopularity": 15
+  },
+  {
+    "id": "0968",
+    "name": "band alternating biceps curl",
+    "name_ru": "Поочерёдное сгибание на бицепс с резинкой",
+    "body_part": "upper arms",
+    "equipment": "band",
+    "target": "biceps",
+    "muscle_group": "forearms",
+    "globalPopularity": 20
+  },
+  {
+    "id": "3360",
+    "name": "bear crawl",
+    "name_ru": "Медведя ползком",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "core",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0993",
+    "name": "band reverse fly",
+    "name_ru": "Обратный разведение с резинкой",
+    "body_part": "shoulders",
+    "equipment": "band",
+    "target": "delts",
+    "muscle_group": "upper back",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1411",
+    "name": "barbell palms down wrist curl over a bench",
+    "name_ru": "Ладонями сгибание запястий на скамье со штангой",
+    "body_part": "lower arms",
+    "equipment": "barbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0006",
+    "name": "alternate heel touchers",
+    "name_ru": "Поочерёдные касания пяток",
+    "body_part": "waist",
+    "equipment": "body weight",
+    "target": "abs",
+    "muscle_group": "obliques",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1710",
+    "name": "assisted lying gluteus and piriformis stretch",
+    "name_ru": "Растяжка ягодиц и грушевидной лёжа с поддержкой",
+    "body_part": "upper legs",
+    "equipment": "assisted",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 15
+  },
+  {
+    "id": "0017",
+    "name": "assisted pull-up",
+    "name_ru": "Подтягивания с поддержкой",
+    "body_part": "back",
+    "equipment": "leverage machine",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1000",
+    "name": "band single leg reverse calf raise",
+    "name_ru": "На одной ноге обратный подъём на носки с резинкой",
+    "body_part": "lower legs",
+    "equipment": "band",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "2364",
+    "name": "assisted wide-grip chest dip (kneeling)",
+    "name_ru": "Отжимания на брусьях широким хватом на грудь с поддержкой (на коленях)",
+    "body_part": "chest",
+    "equipment": "leverage machine",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0975",
+    "name": "band close-grip push-up",
+    "name_ru": "Отжимания узким хватом с резинкой",
+    "body_part": "upper arms",
+    "equipment": "band",
+    "target": "triceps",
+    "muscle_group": "chest",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1160",
+    "name": "burpee",
+    "name_ru": "Берпи",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0997",
+    "name": "band shoulder press",
+    "name_ru": "Жим плечами с резинкой",
+    "body_part": "shoulders",
+    "equipment": "band",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1412",
+    "name": "barbell palms up wrist curl over a bench",
+    "name_ru": "Ладонями сгибание запястий на скамье со штангой",
+    "body_part": "lower arms",
+    "equipment": "barbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "2355",
+    "name": "arm slingers hanging bent knee legs",
+    "name_ru": "Разведение рук в висе с согнутыми коленями",
+    "body_part": "waist",
+    "equipment": "body weight",
+    "target": "abs",
+    "muscle_group": "shoulders",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0016",
+    "name": "assisted prone hamstring",
+    "name_ru": "Лёжа на животе бицепса бедра с поддержкой",
+    "body_part": "upper legs",
+    "equipment": "assisted",
+    "target": "hamstrings",
+    "muscle_group": "glutes",
+    "globalPopularity": 15
+  },
+  {
+    "id": "1431",
+    "name": "assisted standing chin-up",
+    "name_ru": "Стоя подтягивания обратным хватом с поддержкой",
+    "body_part": "back",
+    "equipment": "leverage machine",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1369",
+    "name": "band two legs calf raise - (band under both legs) v. 2",
+    "name_ru": "Двумя ногами подъём на носки - (резинкой обеими ногами) вариант 2 с резинкой",
+    "body_part": "lower legs",
+    "equipment": "band",
+    "target": "calves",
+    "muscle_group": "ankles",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1254",
+    "name": "band bench press",
+    "name_ru": "Жим лёжа с резинкой",
+    "body_part": "chest",
+    "equipment": "band",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0976",
+    "name": "band concentration curl",
+    "name_ru": "Концентрированное сгибание с резинкой",
+    "body_part": "upper arms",
+    "equipment": "band",
+    "target": "biceps",
+    "muscle_group": "forearms",
+    "globalPopularity": 20
+  },
+  {
+    "id": "2331",
+    "name": "cycle cross trainer",
+    "name_ru": "Кросс-тренажёр (велосипед)",
+    "body_part": "cardio",
+    "equipment": "leverage machine",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 35
+  },
+  {
+    "id": "1022",
+    "name": "band standing rear delt row",
+    "name_ru": "Стоя тяга задних дельт с резинкой",
+    "body_part": "shoulders",
+    "equipment": "band",
+    "target": "delts",
+    "muscle_group": "trapezius",
+    "globalPopularity": 35
+  },
+  {
+    "id": "0079",
+    "name": "barbell revers wrist curl v. 2",
+    "name_ru": "Обратный сгибание запястий вариант 2 со штангой",
+    "body_part": "lower arms",
+    "equipment": "barbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "2333",
+    "name": "arm slingers hanging straight legs",
+    "name_ru": "Разведение рук в висе прямой ногами",
+    "body_part": "waist",
+    "equipment": "body weight",
+    "target": "abs",
+    "muscle_group": "shoulders",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1713",
+    "name": "assisted prone lying quads stretch",
+    "name_ru": "Лёжа на животе лёжа приседания для растяжка квадрицепса с поддержкой",
+    "body_part": "upper legs",
+    "equipment": "assisted",
+    "target": "quads",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 15
+  },
+  {
+    "id": "1432",
+    "name": "assisted standing pull-up",
+    "name_ru": "Стоя подтягивания с поддержкой",
+    "body_part": "back",
+    "equipment": "leverage machine",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1370",
+    "name": "barbell floor calf raise",
+    "name_ru": "На полу подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0989",
+    "name": "band one arm twisting chest press",
+    "name_ru": "Одной рукой со скручиванием жим на грудь с резинкой",
+    "body_part": "chest",
+    "equipment": "band",
+    "target": "pectorals",
+    "muscle_group": "shoulders",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0986",
+    "name": "band one arm overhead biceps curl",
+    "name_ru": "Одной рукой над головой сгибание на бицепс с резинкой",
+    "body_part": "upper arms",
+    "equipment": "band",
+    "target": "biceps",
+    "muscle_group": "forearms",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1201",
+    "name": "dumbbell burpee",
+    "name_ru": "Берпи с гантелями",
+    "body_part": "cardio",
+    "equipment": "dumbbell",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1012",
+    "name": "band twisting overhead press",
+    "name_ru": "Со скручиванием жим над головой с резинкой",
+    "body_part": "shoulders",
+    "equipment": "band",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0082",
+    "name": "barbell reverse wrist curl",
+    "name_ru": "Обратное сгибание запястий со штангой",
+    "body_part": "lower arms",
+    "equipment": "barbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3204",
+    "name": "arms overhead full sit-up (male)",
+    "name_ru": "Руками над головой полный скручивания",
+    "body_part": "waist",
+    "equipment": "body weight",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1712",
+    "name": "assisted side lying adductor stretch",
+    "name_ru": "Боковой лёжа аддуктора растяжка с поддержкой",
+    "body_part": "upper legs",
+    "equipment": "assisted",
+    "target": "adductors",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 15
+  },
+  {
+    "id": "1314",
+    "name": "back extension on exercise ball",
+    "name_ru": "Разгибание спины на фитболе",
+    "body_part": "back",
+    "equipment": "stability ball",
+    "target": "spine",
+    "muscle_group": "glutes",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0088",
+    "name": "barbell seated calf raise",
+    "name_ru": "Сидя подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0025",
+    "name": "barbell bench press",
+    "name_ru": "Жим лёжа со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 100
+  },
+  {
+    "id": "0998",
+    "name": "band side triceps extension",
+    "name_ru": "Боковой разгибание на трицепс с резинкой",
+    "body_part": "upper arms",
+    "equipment": "band",
+    "target": "triceps",
+    "muscle_group": "shoulders",
+    "globalPopularity": 20
+  },
+  {
+    "id": "3221",
+    "name": "half knee bends (male)",
+    "name_ru": "Половинный колена наклоны",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1017",
+    "name": "band y-raise",
+    "name_ru": "Y-подъём с резинкой",
+    "body_part": "shoulders",
+    "equipment": "band",
+    "target": "delts",
+    "muscle_group": "traps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0104",
+    "name": "barbell standing back wrist curl",
+    "name_ru": "Стоя сгибание запястий за спиной со штангой",
+    "body_part": "lower arms",
+    "equipment": "barbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0011",
+    "name": "assisted hanging knee raise",
+    "name_ru": "Подъём коленей в висе с поддержкой",
+    "body_part": "waist",
+    "equipment": "assisted",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 15
+  },
+  {
+    "id": "1473",
+    "name": "backward jump",
+    "name_ru": "Назад прыжок",
+    "body_part": "upper legs",
+    "equipment": "body weight",
+    "target": "quads",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3297",
+    "name": "back lever",
+    "name_ru": "Спины рычаг",
+    "body_part": "back",
+    "equipment": "body weight",
+    "target": "upper back",
+    "muscle_group": "biceps",
+    "globalPopularity": 35
+  },
+  {
+    "id": "1371",
+    "name": "barbell seated calf raise",
+    "name_ru": "Сидя подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0033",
+    "name": "barbell decline bench press",
+    "name_ru": "Жим лёжа на наклонной скамье вниз со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0023",
+    "name": "barbell alternate biceps curl",
+    "name_ru": "Поочерёдный сгибание на бицепс со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "biceps",
+    "muscle_group": "forearms",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3636",
+    "name": "high knee against wall",
+    "name_ru": "Высокий колена у стены",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0041",
+    "name": "barbell front raise",
+    "name_ru": "Подъём вперёд со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0126",
+    "name": "barbell wrist curl",
+    "name_ru": "Сгибание запястий со штангой",
+    "body_part": "lower arms",
+    "equipment": "barbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0010",
+    "name": "assisted hanging knee raise with throw down",
+    "name_ru": "В висе колена подъём бросок с поддержкой",
+    "body_part": "waist",
+    "equipment": "assisted",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 15
+  },
+  {
+    "id": "0020",
+    "name": "balance board",
+    "name_ru": "Балансировка на доске",
+    "body_part": "upper legs",
+    "equipment": "body weight",
+    "target": "quads",
+    "muscle_group": "calves",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1405",
+    "name": "back pec stretch",
+    "name_ru": "Спины грудных растяжка",
+    "body_part": "back",
+    "equipment": "body weight",
+    "target": "lats",
+    "muscle_group": "shoulders",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1372",
+    "name": "barbell standing calf raise",
+    "name_ru": "Подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 80
+  },
+  {
+    "id": "1255",
+    "name": "barbell decline pullover",
+    "name_ru": "Пуловер вниз головой со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "2407",
+    "name": "barbell biceps curl (with arm blaster)",
+    "name_ru": "Сгибание на бицепс со штангой (бластером для рук)",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "biceps",
+    "muscle_group": "forearms",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0501",
+    "name": "jack burpee",
+    "name_ru": "Джек- берпи",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0067",
+    "name": "barbell one arm snatch",
+    "name_ru": "Рывок одной рукой со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "traps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0125",
+    "name": "barbell wrist curl v. 2",
+    "name_ru": "Сгибание запястий вариант 2 со штангой",
+    "body_part": "lower arms",
+    "equipment": "barbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0012",
+    "name": "assisted lying leg raise with lateral throw down",
+    "name_ru": "Лёжа ногой подъём боковой бросок с поддержкой",
+    "body_part": "waist",
+    "equipment": "assisted",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 15
+  },
+  {
+    "id": "0980",
+    "name": "band bent-over hip extension",
+    "name_ru": "В наклоне разгибание бедра с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0970",
+    "name": "band assisted pull-up",
+    "name_ru": "Подтягивания с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0108",
+    "name": "barbell standing leg calf raise",
+    "name_ru": "Стоя ногой подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0036",
+    "name": "barbell decline wide-grip press",
+    "name_ru": "Жим широким хватом на наклонной скамье вниз",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0030",
+    "name": "barbell close-grip bench press",
+    "name_ru": "Жим лёжа узким хватом со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "chest",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3224",
+    "name": "jack jump (male)",
+    "name_ru": "Джек- прыжок",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0075",
+    "name": "barbell rear delt raise",
+    "name_ru": "Подъём задних дельт со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "traps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0210",
+    "name": "cable reverse wrist curl",
+    "name_ru": "Обратное сгибание запястий на блоке",
+    "body_part": "lower arms",
+    "equipment": "cable",
+    "target": "forearms",
+    "muscle_group": "forearms",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0013",
+    "name": "assisted lying leg raise with throw down",
+    "name_ru": "Лёжа ногой подъём бросок с поддержкой",
+    "body_part": "waist",
+    "equipment": "assisted",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 15
+  },
+  {
+    "id": "1408",
+    "name": "band hip lift",
+    "name_ru": "Подъём бедра с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0974",
+    "name": "band close-grip pulldown",
+    "name_ru": "Узким хватом тяга с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0111",
+    "name": "barbell standing rocking leg calf raise",
+    "name_ru": "Стоя качание ногой подъём на носки со штангой",
+    "body_part": "lower legs",
+    "equipment": "barbell",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0040",
+    "name": "barbell front raise and pullover",
+    "name_ru": "Подъём вперёд и пуловер со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "deltoids",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0031",
+    "name": "barbell curl",
+    "name_ru": "Сгибание на бицепс со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "biceps",
+    "muscle_group": "forearms",
+    "globalPopularity": 82
+  },
+  {
+    "id": "2612",
+    "name": "jump rope",
+    "name_ru": "Скакалка",
+    "body_part": "cardio",
+    "equipment": "rope",
+    "target": "cardiovascular system",
+    "muscle_group": "calves",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0076",
+    "name": "barbell rear delt row",
+    "name_ru": "Тяга задних дельт со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "trapezius",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0224",
+    "name": "cable standing back wrist curl",
+    "name_ru": "Стоя сгибание запястий за спиной на блоке",
+    "body_part": "lower arms",
+    "equipment": "cable",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0014",
+    "name": "assisted motion russian twist",
+    "name_ru": "Русское скручивание с поддержкой",
+    "body_part": "waist",
+    "equipment": "medicine ball",
+    "target": "abs",
+    "muscle_group": "obliques",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0984",
+    "name": "band lying hip internal rotation",
+    "name_ru": "Лёжа внутренняя ротация бедра с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "3117",
+    "name": "band fixed back close grip pulldown",
+    "name_ru": "Фиксированный спины узким хватом тяга с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1373",
+    "name": "bodyweight standing calf raise",
+    "name_ru": "Подъём на носки",
+    "body_part": "lower legs",
+    "equipment": "body weight",
+    "target": "calves",
+    "muscle_group": "ankles",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0045",
+    "name": "barbell guillotine bench press",
+    "name_ru": "Жим лёжа «гильотина» со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "shoulders",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0035",
+    "name": "barbell decline close grip to skull press",
+    "name_ru": "Жим узким хватом на трицепс вниз головой со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "chest",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0630",
+    "name": "mountain climber",
+    "name_ru": "Скалолаз",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "core",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0086",
+    "name": "barbell seated behind head military press",
+    "name_ru": "Армейский жим из-за головы сидя со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0247",
+    "name": "cable wrist curl",
+    "name_ru": "Сгибание запястий на блоке",
+    "body_part": "lower arms",
+    "equipment": "cable",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1714",
+    "name": "assisted prone rectus femoris stretch",
+    "name_ru": "Лёжа на животе прямой бедра растяжка с поддержкой",
+    "body_part": "waist",
+    "equipment": "assisted",
+    "target": "abs",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 15
+  },
+  {
+    "id": "0987",
+    "name": "band one arm single leg split squat",
+    "name_ru": "Болгарские выпады одной рукой с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "quads",
+    "muscle_group": "glutes",
+    "globalPopularity": 20
+  },
+  {
+    "id": "3116",
+    "name": "band fixed back underhand pulldown",
+    "name_ru": "Фиксированный спины обратным хватом тяга с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 35
+  },
+  {
+    "id": "1374",
+    "name": "box jump down with one leg stabilization",
+    "name_ru": "Прыжок с тумбы на одной ноге с удержанием",
+    "body_part": "lower legs",
+    "equipment": "body weight",
+    "target": "calves",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0047",
+    "name": "barbell incline bench press",
+    "name_ru": "Жим лёжа на наклонной скамье со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "shoulders",
+    "globalPopularity": 89
+  },
+  {
+    "id": "0038",
+    "name": "barbell drag curl",
+    "name_ru": "Тяговое сгибание со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "biceps",
+    "muscle_group": "forearms",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3638",
+    "name": "push to run",
+    "name_ru": "Отжимание с бегом",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0087",
+    "name": "barbell seated bradford rocky press",
+    "name_ru": "Сидя жим Брэдфорда-Роки со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1437",
+    "name": "dumbbell finger curls",
+    "name_ru": "Пальцев сгибания на бицепс с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "wrist flexors",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1758",
+    "name": "assisted sit-up",
+    "name_ru": "Скручивания с поддержкой",
+    "body_part": "waist",
+    "equipment": "assisted",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 15
+  },
+  {
+    "id": "0991",
+    "name": "band pull through",
+    "name_ru": "Тяга сквозной с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0983",
+    "name": "band kneeling one arm pulldown",
+    "name_ru": "На коленях одной рукой тяга с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1375",
+    "name": "cable standing calf raise",
+    "name_ru": "Стоя подъём на носки на блоке",
+    "body_part": "lower legs",
+    "equipment": "cable",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0050",
+    "name": "barbell incline shoulder raise",
+    "name_ru": "Наклонный подъём плеча со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "serratus anterior",
+    "muscle_group": "deltoids",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1719",
+    "name": "barbell incline close grip bench press",
+    "name_ru": "Наклонный узким хватом жим лёжа со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "chest",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0685",
+    "name": "run",
+    "name_ru": "Бег",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0091",
+    "name": "barbell seated overhead press",
+    "name_ru": "Жим над головой сидя со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0347",
+    "name": "dumbbell lying pronation",
+    "name_ru": "Лёжа пронация с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0969",
+    "name": "band alternating v-up",
+    "name_ru": "Поочерёдная V-складка с резинкой",
+    "body_part": "waist",
+    "equipment": "band",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0996",
+    "name": "band seated hip internal rotation",
+    "name_ru": "Сидя внутренняя ротация бедра с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0988",
+    "name": "band one arm standing low row",
+    "name_ru": "Низкая тяга одной рукой стоя с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "upper back",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1376",
+    "name": "cable standing one leg calf raise",
+    "name_ru": "Стоя подъём на носки на одной ноге на блоке",
+    "body_part": "lower legs",
+    "equipment": "cable",
+    "target": "calves",
+    "muscle_group": "ankles",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1256",
+    "name": "barbell reverse grip decline bench press",
+    "name_ru": "Обратным хватом на наклонной скамье вниз жим со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0048",
+    "name": "barbell incline reverse-grip press",
+    "name_ru": "Наклонный обратный-хватом жим со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "chest",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0684",
+    "name": "run (equipment)",
+    "name_ru": "Бег (тренажёре)",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0100",
+    "name": "barbell skier",
+    "name_ru": "Лыжника со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "2705",
+    "name": "dumbbell lying pronation on floor",
+    "name_ru": "Лёжа пронация на полу с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0971",
+    "name": "band assisted wheel rollerout",
+    "name_ru": "С поддержкой колесом прокат с резинкой",
+    "body_part": "waist",
+    "equipment": "band",
+    "target": "abs",
+    "muscle_group": "lower back",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1001",
+    "name": "band single leg split squat",
+    "name_ru": "Болгарские выпады с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "quads",
+    "muscle_group": "glutes",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0990",
+    "name": "band one arm twisting seated row",
+    "name_ru": "Одной рукой со скручиванием тяга сидя с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "upper back",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1407",
+    "name": "calf push stretch with hands against wall",
+    "name_ru": "Растяжка икр руками у стены",
+    "body_part": "lower legs",
+    "equipment": "body weight",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1257",
+    "name": "barbell reverse grip incline bench press",
+    "name_ru": "Обратным хватом на наклонной скамье жим со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0052",
+    "name": "barbell jm bench press",
+    "name_ru": "JM-жим лёжа со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "chest",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3219",
+    "name": "scissor jumps (male)",
+    "name_ru": "Ножницы прыжки",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0105",
+    "name": "barbell standing bradford press",
+    "name_ru": "Стоя жим Брэдфорда со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0349",
+    "name": "dumbbell lying supination",
+    "name_ru": "Лёжа с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0972",
+    "name": "band bicycle crunch",
+    "name_ru": "Велосипедное скручивание с резинкой",
+    "body_part": "waist",
+    "equipment": "band",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1004",
+    "name": "band squat",
+    "name_ru": "Присед с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 35
+  },
+  {
+    "id": "1018",
+    "name": "band shrug",
+    "name_ru": "Шраги с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "traps",
+    "muscle_group": "shoulders",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1377",
+    "name": "calf stretch with hands against wall",
+    "name_ru": "Растяжка икр руками у стены",
+    "body_part": "lower legs",
+    "equipment": "body weight",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0122",
+    "name": "barbell wide bench press",
+    "name_ru": "Широкий жим лёжа со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "shoulders",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1720",
+    "name": "barbell lying back of the head tricep extension",
+    "name_ru": "Лёжа спины головой разгибание трицепса со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "shoulders",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3222",
+    "name": "semi squat jump (male)",
+    "name_ru": "Присед прыжок",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1456",
+    "name": "barbell standing close grip military press",
+    "name_ru": "Армейский жим узким хватом стоя со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "2706",
+    "name": "dumbbell lying supination on floor",
+    "name_ru": "Лёжа на полу с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0979",
+    "name": "band horizontal pallof press",
+    "name_ru": "Горизонтальный жим Паллофа с резинкой",
+    "body_part": "waist",
+    "equipment": "band",
+    "target": "abs",
+    "muscle_group": "obliques",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1003",
+    "name": "band squat row",
+    "name_ru": "Присед с тягой с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 35
+  },
+  {
+    "id": "1010",
+    "name": "band straight leg deadlift",
+    "name_ru": "Тяга на прямых ногах с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "spine",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1378",
+    "name": "calf stretch with rope",
+    "name_ru": "Растяжка икр с канатом",
+    "body_part": "lower legs",
+    "equipment": "rope",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1258",
+    "name": "barbell wide reverse grip bench press",
+    "name_ru": "Широкий обратным хватом жим лёжа со штангой",
+    "body_part": "chest",
+    "equipment": "barbell",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0055",
+    "name": "barbell lying close-grip press",
+    "name_ru": "Лёжа узким хватом жим со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "chest",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3656",
+    "name": "short stride run",
+    "name_ru": "Короткий шаг бег",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0107",
+    "name": "barbell standing front raise over head",
+    "name_ru": "Стоя подъём вперёд головой со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0358",
+    "name": "dumbbell one arm reverse wrist curl",
+    "name_ru": "Одной рукой обратное сгибание запястий с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "wrist extensors",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0981",
+    "name": "band jack knife sit-up",
+    "name_ru": "Ножницы скручивания с резинкой",
+    "body_part": "waist",
+    "equipment": "band",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1008",
+    "name": "band step-up",
+    "name_ru": "Зашагивание с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 35
+  },
+  {
+    "id": "1013",
+    "name": "band underhand pulldown",
+    "name_ru": "Обратным хватом тяга с резинкой",
+    "body_part": "back",
+    "equipment": "band",
+    "target": "lats",
+    "muscle_group": "biceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0257",
+    "name": "circles knee stretch",
+    "name_ru": "Круги колена растяжка",
+    "body_part": "lower legs",
+    "equipment": "body weight",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1259",
+    "name": "behind head chest stretch",
+    "name_ru": "За головой на растяжка грудь",
+    "body_part": "chest",
+    "equipment": "assisted",
+    "target": "pectorals",
+    "muscle_group": "shoulders",
+    "globalPopularity": 15
+  },
+  {
+    "id": "0056",
+    "name": "barbell lying close-grip triceps extension",
+    "name_ru": "Лёжа узким хватом разгибание на трицепс со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "shoulders",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3361",
+    "name": "skater hops",
+    "name_ru": "Прыжки конькобежца",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1457",
+    "name": "barbell standing wide military press",
+    "name_ru": "Армейский жим широким хватом стоя со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1415",
+    "name": "dumbbell one arm seated neutral wrist curl",
+    "name_ru": "Одной рукой сидя нейтральный сгибание запястий с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0985",
+    "name": "band kneeling twisting crunch",
+    "name_ru": "На коленях со скручиванием скручивание с резинкой",
+    "body_part": "waist",
+    "equipment": "band",
+    "target": "abs",
+    "muscle_group": "obliques",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1009",
+    "name": "band stiff leg deadlift",
+    "name_ru": "Тяга на прямых ногах с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1316",
+    "name": "barbell bent arm pullover",
+    "name_ru": "Согнутой рукой пуловер со штангой",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "lats",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0284",
+    "name": "donkey calf raise",
+    "name_ru": "Осла подъём на носки",
+    "body_part": "lower legs",
+    "equipment": "body weight",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0151",
+    "name": "cable bench press",
+    "name_ru": "Жим лёжа на блоке",
+    "body_part": "chest",
+    "equipment": "cable",
+    "target": "pectorals",
+    "muscle_group": "triceps",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0057",
+    "name": "barbell lying extension",
+    "name_ru": "Лёжа разгибание со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "shoulders",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3671",
+    "name": "ski step",
+    "name_ru": "Лыжный шаг",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3305",
+    "name": "barbell thruster",
+    "name_ru": "Трастер со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0364",
+    "name": "dumbbell one arm wrist curl",
+    "name_ru": "Одной рукой сгибание запястий с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1002",
+    "name": "band lying straight leg raise",
+    "name_ru": "Лёжа подъём прямой ноги с резинкой",
+    "body_part": "waist",
+    "equipment": "band",
+    "target": "abs",
+    "muscle_group": "hip flexors",
+    "globalPopularity": 20
+  },
+  {
+    "id": "1023",
+    "name": "band straight back stiff leg deadlift",
+    "name_ru": "Тяга на прямых ногах с прямой спиной с резинкой",
+    "body_part": "upper legs",
+    "equipment": "band",
+    "target": "glutes",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0027",
+    "name": "barbell bent over row",
+    "name_ru": "Тяга штанги в наклоне",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "upper back",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1379",
+    "name": "dumbbell seated calf raise",
+    "name_ru": "Сидя подъём на носки с гантелями",
+    "body_part": "lower legs",
+    "equipment": "dumbbell",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0155",
+    "name": "cable cross-over variation",
+    "name_ru": "Кроссовер вариант на блоке",
+    "body_part": "chest",
+    "equipment": "cable",
+    "target": "pectorals",
+    "muscle_group": "deltoids",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0059",
+    "name": "barbell lying preacher curl",
+    "name_ru": "Лёжа сгибание на скамье Скотта со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "biceps",
+    "muscle_group": "forearms",
+    "globalPopularity": 25
+  },
+  {
+    "id": "3223",
+    "name": "star jump (male)",
+    "name_ru": "Прыжок звезда",
+    "body_part": "cardio",
+    "equipment": "body weight",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0120",
+    "name": "barbell upright row",
+    "name_ru": "Тяга к подбородку со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "traps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "1441",
+    "name": "dumbbell over bench one arm reverse wrist curl",
+    "name_ru": "На скамье одной рукой обратное сгибание запястий с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0992",
+    "name": "band push sit-up",
+    "name_ru": "Жим скручивания с резинкой",
+    "body_part": "waist",
+    "equipment": "band",
+    "target": "abs",
+    "muscle_group": "shoulders",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0024",
+    "name": "barbell bench front squat",
+    "name_ru": "Фронтальный присед со штангой со скамьи",
+    "body_part": "upper legs",
+    "equipment": "barbell",
+    "target": "quads",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0034",
+    "name": "barbell decline bent arm pullover",
+    "name_ru": "Вниз головой согнутой рукой пуловер со штангой",
+    "body_part": "back",
+    "equipment": "barbell",
+    "target": "lats",
+    "muscle_group": "triceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0400",
+    "name": "dumbbell seated one leg calf raise",
+    "name_ru": "Сидя подъём на носки на одной ноге с гантелями",
+    "body_part": "lower legs",
+    "equipment": "dumbbell",
+    "target": "calves",
+    "muscle_group": "hamstrings",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0158",
+    "name": "cable decline fly",
+    "name_ru": "Разведение вниз головой на блоке",
+    "body_part": "chest",
+    "equipment": "cable",
+    "target": "pectorals",
+    "muscle_group": "shoulders",
+    "globalPopularity": 20
+  },
+  {
+    "id": "0061",
+    "name": "barbell lying triceps extension",
+    "name_ru": "Лёжа разгибание на трицепс со штангой",
+    "body_part": "upper arms",
+    "equipment": "barbell",
+    "target": "triceps",
+    "muscle_group": "shoulders",
+    "globalPopularity": 81
+  },
+  {
+    "id": "2138",
+    "name": "stationary bike run v. 3",
+    "name_ru": "Бег V. 3 на велотренажёре",
+    "body_part": "cardio",
+    "equipment": "stationary bike",
+    "target": "cardiovascular system",
+    "muscle_group": "quadriceps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0119",
+    "name": "barbell upright row v. 2",
+    "name_ru": "Тяга к подбородку вариант 2 со штангой",
+    "body_part": "shoulders",
+    "equipment": "barbell",
+    "target": "delts",
+    "muscle_group": "traps",
+    "globalPopularity": 25
+  },
+  {
+    "id": "0367",
+    "name": "dumbbell over bench one arm wrist curl",
+    "name_ru": "На скамье одной рукой сгибание запястий с гантелями",
+    "body_part": "lower arms",
+    "equipment": "dumbbell",
+    "target": "forearms",
+    "muscle_group": "biceps",
+    "globalPopularity": 25
+  }
+]

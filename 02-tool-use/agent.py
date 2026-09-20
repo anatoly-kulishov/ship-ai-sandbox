@@ -18,7 +18,7 @@ from pydantic import BaseModel, ValidationError
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from lib.gigachat import MODEL, get_client  # noqa: E402
+from lib.llm import MODEL, get_client  # noqa: E402
 
 DB_PATH = Path(__file__).resolve().parent / "notes.db"
 
