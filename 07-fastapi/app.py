@@ -2,13 +2,19 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import streamlit as st
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def render() -> None:
     st.set_page_config(page_title="07 · FastAPI gateway", page_icon="🚀")
     st.title("07 · FastAPI gateway")
     st.caption("HTTP API над генератором плана и RAG retrieve")
+    with st.expander("Конспект урока"):
+        st.markdown((ROOT / "docs" / "07-fastapi.md").read_text(encoding="utf-8"))
 
     st.markdown(
         """
@@ -30,9 +36,6 @@ def render() -> None:
         ```bash
         npm run check:07
         ```
-
-        ### Конспект
-        Подробности в `docs/07-fastapi.md`.
         """
     )
 
