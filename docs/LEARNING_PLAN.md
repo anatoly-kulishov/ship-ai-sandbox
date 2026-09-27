@@ -57,6 +57,7 @@
 | 04 | Gym plan structured + catalog whitelist (`04-gym-plan/`) | must (Repdraft bridge) |
 | 05 | RAG embeddings + cosine по каталогу (`05-rag/`) | must (фаза D урок 11) |
 | 06 | GGUF / квантизация, модель под RAM (`06-gguf/`) | must (фаза B урок 04) |
+| 07 | FastAPI gateway (`07-fastapi/`) | must (фаза C урок 06) |
 
 ---
 
@@ -291,6 +292,4 @@ User ──► FastAPI (async) ──┤
 
 ## Следующий шаг
 
-**Урок 05 · Мульти-провайдер** — один клиент `LLM_PROVIDER` → GigaChat или Ollama (частично уже `lib/llm.py`).
-
-Или закрепи 06: `python 06-gguf/check.py` и Hub → **06 GGUF**.
+**Урок 08 · asyncio + async OpenAI client** — зачем LLM-gateway должен быть async, и как сделать `POST /plan` неблокирующим.

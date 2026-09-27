@@ -59,6 +59,6 @@ Hub → **06 GGUF** или `npm run 06`.
 On-prem ждут выбор модели по железу. Квантизация - как впихнуть 7B/14B в ноутбук.
 
 ## Дальше
-План: явный «один клиент» cloud ∪ Ollama (частично уже `lib/llm.py`). Потом FastAPI gateway `POST /plan`.
+→ [07 · FastAPI](./07-fastapi.md)
 
 [Уроки](../README.md#уроки) · [← 05](./05-rag.md) · [план](./LEARNING_PLAN.md)

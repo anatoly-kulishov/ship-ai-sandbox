@@ -1,6 +1,6 @@
 # Контекст для нового чата · продолжаем учиться
 
-Дата снимка: **2026-09-20**. Открой этот файл в новом чате и скажи: «продолжай по `docs/CONTINUE.md`».
+Дата снимка: **2026-09-27**. Открой этот файл в новом чате и скажи: «продолжай по `docs/CONTINUE.md`».
 
 ---
 
@@ -27,6 +27,7 @@
 | 04 | `04-gym-plan/` · [04-gym-plan.md](./04-gym-plan.md) | Gym plan + catalog whitelist |
 | 05 | `05-rag/` · [05-rag.md](./05-rag.md) | Embeddings + cosine по каталогу (фаза D / урок 11) |
 | 06 | `06-gguf/` · [06-gguf.md](./06-gguf.md) | GGUF / Q4-Q8, модель под RAM (фаза B / урок 04 плана) |
+| 07 | `07-fastapi/` · [07-fastapi.md](./07-fastapi.md) | FastAPI gateway: health, POST /plan, POST /retrieve (фаза C / урок 06 плана) |
 
 Стек sandbox: Streamlit hub (`app.py`, `pages/`), `lib/llm.py` / `lib/gigachat.py`, `.env` с GigaChat + Ollama.
 
@@ -132,11 +133,10 @@ Sandbox `.env` - свой набор для Streamlit-уроков (тот же 
 
 | Приоритет | Тема плана | Идея следующего урока в sandbox |
 |---|---|---|
-| 1 | B · урок 05 | Мульти-провайдер уже частично есть (`lib/llm.py`) - довести до явного «один клиент» |
-| 2 | C · урок 06 | **FastAPI** gateway: `POST /plan` рядом с Streamlit |
-| 3 | D · урок 12 | Qdrant или pgvector (сейчас cosine руками) |
-| 4 | E · agents | после tools+RAG |
-| 5 | Прод | Залить Vercel secrets; опционально `build:embeddings` и закоммитить индекс |
+| 1 | C · урок 07 | **asyncio + async OpenAI client** — `POST /plan` неблокирующий |
+| 2 | D · урок 12 | Qdrant или pgvector (сейчас cosine руками) |
+| 3 | E · agents | после tools+RAG |
+| 4 | Прод | Залить Vercel secrets; опционально `build:embeddings` и закоммитить индекс |
 
 Видео-запросы: [`YOUTUBE_SEARCH.md`](./YOUTUBE_SEARCH.md).
 
@@ -163,9 +163,8 @@ npm run check:ai
 ```text
 Продолжаем обучение по docs/CONTINUE.md в ship-ai-sandbox.
 Репозитории: ship-ai-sandbox (уроки) и repdraft (продукт, /ai уже в v0.18.0).
-Следующий шаг: предложи один следующий урок из LEARNING_PLAN (не всё сразу)
-и сразу начни с минимального задания в sandbox.
-06-gguf уже есть. Открытый хвост прода: Vercel GIGACHAT_* для /ai.
+Следующий шаг: урок 08 · asyncio + async OpenAI client (не всё сразу).
+07-fastapi уже есть. Открытый хвост прода: Vercel GIGACHAT_* для /ai.
 ```
 
 ---
@@ -173,6 +172,6 @@ npm run check:ai
 ## Ссылки
 
 - План: [LEARNING_PLAN.md](./LEARNING_PLAN.md)
-- Уроки: [01](./01-note-sorter.md) · [02](./02-tool-use.md) · [03](./03-ollama.md) · [04](./04-gym-plan.md) · [05](./05-rag.md) · [06](./06-gguf.md)
+- Уроки: [01](./01-note-sorter.md) · [02](./02-tool-use.md) · [03](./03-ollama.md) · [04](./04-gym-plan.md) · [05](./05-rag.md) · [06](./06-gguf.md) · [07](./07-fastapi.md)
 - Repdraft release: https://github.com/anatoly-kulishov/Repdraft/releases/tag/v0.18.0
 - Прод preview/prod: `https://repdraft-zeta.vercel.app` (из `.env.example`)

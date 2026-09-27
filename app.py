@@ -21,6 +21,7 @@ st.markdown(
 | **04 · Gym Plan** | brief → план с whitelist exerciseId | `docs/04-gym-plan.md` |
 | **05 · RAG** | embeddings + cosine по каталогу зала | `docs/05-rag.md` |
 | **06 · GGUF** | квантизация Q4/Q5/Q8, модель под RAM | `docs/06-gguf.md` |
+| **07 · FastAPI** | тот же план через HTTP API со Swagger | `docs/07-fastapi.md` |
 
 CLI (если нужно без UI):
 ```bash
@@ -31,6 +32,7 @@ python 04-gym-plan/check.py "грудь трицепс штанга"
 python 05-rag/check.py build
 python 05-rag/check.py retrieve "банки"
 python 06-gguf/check.py
+python 07-fastapi/check.py
 ```
 """
 )
