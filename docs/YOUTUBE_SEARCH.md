@@ -52,8 +52,19 @@
 | Pydantic + FastAPI | `FastAPI Pydantic модели` | `FastAPI Pydantic request body` |
 | Async Python | `async await Python просто` | `Python asyncio explained` |
 | httpx / async HTTP | `httpx async Python` | `httpx vs requests async` |
+| Async OpenAI client | `OpenAI async Python client` | `AsyncOpenAI streaming tutorial` |
+| SSE / streaming | `Server-Sent Events Python FastAPI` | `SSE streaming FastAPI tutorial` |
+| WebSockets | `WebSockets FastAPI Python` | `FastAPI websockets tutorial` |
 | PostgreSQL | `PostgreSQL для начинающих` | `PostgreSQL crash course` |
 | SQLAlchemy | `SQLAlchemy 2.0 туториал` | `SQLAlchemy 2.0 tutorial` |
+| Redis intro | `Redis кэш Python` | `Redis tutorial for beginners` |
+| Celery / фон задачи | `Celery Python туториал` | `Celery FastAPI background tasks` |
+| API rate limiting | `rate limiting FastAPI` | `FastAPI rate limit` |
+| JWT / auth | `JWT auth FastAPI` | `FastAPI authentication JWT` |
+| Webhooks | `webhooks просто` | `webhooks explained` |
+| Logging / tracing | `logging Python structlog` | `OpenTelemetry Python tracing` |
+| pytest / TDD | `pytest Python туториал` | `pytest FastAPI testing` |
+| CI/CD для Python | `GitHub Actions Python CI CD` | `Python CI CD pipeline tutorial` |
 | Микросервисы intro | `микросервисы Python FastAPI` | `Python microservices FastAPI` |
 
 ---
@@ -75,6 +86,7 @@
 | Hybrid search | `hybrid search RAG BM25` | `hybrid search dense sparse RAG` |
 | Reranking | `reranker RAG` | `reranking in RAG pipelines` |
 | Citations / grounding | `RAG цитирование источников` | `RAG citations grounding` |
+| GraphRAG / Knowledge Graph | `GraphRAG просто` | `GraphRAG knowledge graph RAG` |
 | LangChain | `LangChain RAG туториал` | `LangChain RAG tutorial 2024` |
 | LlamaIndex | `LlamaIndex туториал` | `LlamaIndex beginner tutorial` |
 | Парсинг документов | `парсинг PDF Python RAG` | `PDF parsing for RAG Unstructured` |
@@ -111,6 +123,12 @@
 | RBAC | `RBAC простыми словами` | `RBAC explained` |
 | AI Application Engineer | `AI engineer чем занимается` | `AI application engineer role` |
 | MLOps vs LLMOps | `LLMOps что это` | `LLMOps vs MLOps` |
+| Cost optimization | `экономия на OpenAI API` | `LLM API cost optimization` |
+| Batch API | `OpenAI batch API tutorial` | `OpenAI batch API explained` |
+| Prompt versioning | `prompt versioning LLM` | `prompt management tools` |
+| A/B testing prompts | `A B testing LLM prompts` | `LLM prompt A/B testing` |
+| Structured output reliability | `LLM JSON mode reliable` | `structured output LLM best practices` |
+| Error handling LLM | `обработка ошибок LLM API` | `LLM API error handling retries` |
 | Langfuse / tracing | `Langfuse туториал` | `Langfuse tutorial LLM` |
 | LLM-as-a-Judge | `LLM as a judge` | `LLM-as-a-judge evaluation` |
 
@@ -144,13 +162,14 @@
 
 1. LLM + tokens + context + temperature + structured output  
 2. function calling → Ollama + local LLM  
-3. FastAPI + asyncio + Postgres  
-4. RAG explained → chunking → embeddings → Qdrant/pgvector  
-5. LangChain/LlamaIndex **после** своего RAG  
-6. ReAct / agents  
-7. Docker compose + Open WebUI/Dify  
-8. Evals + Langfuse + security  
-9. LoRA / QLoRA (только после RAG)
+3. FastAPI + asyncio + async OpenAI client + SSE  
+4. Postgres + SQLAlchemy + Redis + Celery  
+5. RAG explained → chunking → embeddings → Qdrant/pgvector  
+6. LangChain/LlamaIndex **после** своего RAG  
+7. ReAct / agents / multi-agent  
+8. Docker compose + Open WebUI/Dify  
+9. Evals + Langfuse + security + cost optimization  
+10. LoRA / QLoRA (только после RAG)
 
 ---
 
