@@ -11,7 +11,7 @@
 
 Принцип: один навык за урок, простой язык, пример в `ship-ai-sandbox`. Темп любой.
 
-Видео-запросы: [YOUTUBE_SEARCH.md](./YOUTUBE_SEARCH.md) · конспекты: [01](./01-note-sorter.md), [02](./02-tool-use.md), [03](./03-ollama.md), [04](./04-gym-plan.md), [05](./05-rag.md), [06](./06-gguf.md)
+Видео-запросы: [YOUTUBE_SEARCH.md](./YOUTUBE_SEARCH.md) · конспекты: [01](./01-note-sorter.md) … [08](./08-asyncio.md)
 
 **Новый чат:** снимок прогресса и прод-моста - [CONTINUE.md](./CONTINUE.md).
 
@@ -58,6 +58,7 @@
 | 05 | RAG embeddings + cosine по каталогу (`05-rag/`) | must (фаза D урок 11) |
 | 06 | GGUF / квантизация, модель под RAM (`06-gguf/`) | must (фаза B урок 04) |
 | 07 | FastAPI gateway (`07-fastapi/`) | must (фаза C урок 06) |
+| 08 | asyncio + AsyncOpenAI (`08-asyncio/`) | must (фаза C урок 07) |
 
 ---
 
@@ -146,9 +147,13 @@ User ──► FastAPI (async) ──┤
 
 `POST /classify`, `POST /chat` → Swagger / curl
 
-### Урок 07 · asyncio + async OpenAI client
+### Урок 07 · asyncio + async OpenAI client ✅ в репо
 
-Почему LLM-gateway должен быть async
+- Папка `08-asyncio/`, Hub **08 Asyncio**, порт `:8601`
+- `AsyncOpenAI`, `asyncio.gather`, sync-код через `asyncio.to_thread`
+- См. [08-asyncio.md](./08-asyncio.md)
+
+**Готово:** объясняешь, почему gateway async, и `check:08` зелёный.
 
 ### Урок 08 · PostgreSQL
 
@@ -292,4 +297,6 @@ User ──► FastAPI (async) ──┤
 
 ## Следующий шаг
 
-**Урок 08 · asyncio + async OpenAI client** — зачем LLM-gateway должен быть async, и как сделать `POST /plan` неблокирующим.
+**PostgreSQL** (план C·08, sandbox будет `09-postgres`) — логи/диалоги не только в SQLite.
+
+Или закрепи asyncio: `npm run check:08` и Hub → **08 Asyncio**.

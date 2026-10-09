@@ -1,6 +1,6 @@
 # 07 · FastAPI gateway
 
-[Уроки](../README.md#уроки) · [← 06](./06-gguf.md)
+[Уроки](../README.md#уроки) · [← 06](./06-gguf.md) · [08 →](./08-asyncio.md)
 
 LEARNING_PLAN: фаза C, урок 06. В sandbox папка `07-fastapi/`.
 
@@ -58,6 +58,6 @@ curl -X POST http://localhost:8600/plan \
 FastAPI — это не новый ИИ, это **стандартный способ отдать LLM-функцию по HTTP**. Контракт запроса/ответа — Pydantic. Ошибки — HTTP-статусы. Всё остальное (prompt, whitelist, RAG) остаётся прежним.
 
 ## Дальше
-План: урок 08 · **asyncio + async OpenAI client** — зачем gateway должен быть async, и как сделать `POST /plan` по-настоящему неблокирующим.
+Урок 08: **asyncio + AsyncOpenAI** — `npm run 08`, порт 8601.
 
-[Уроки](../README.md#уроки) · [← 06](./06-gguf.md) · [план](./LEARNING_PLAN.md)
+[Уроки](../README.md#уроки) · [← 06](./06-gguf.md) · [08 →](./08-asyncio.md)

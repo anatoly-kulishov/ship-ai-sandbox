@@ -3,6 +3,9 @@
 Switch provider without rewriting keys:
 
     LLM_PROVIDER=gigachat   # or ollama
+
+Sync: get_client() / ping()
+Async (lesson 08): get_async_client() / ping_async()
 """
 
 from __future__ import annotations
@@ -11,9 +14,10 @@ import os
 import uuid
 from pathlib import Path
 
+import httpx
 import requests
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import AsyncOpenAI, OpenAI
 
 load_dotenv(Path(__file__).resolve().parents[1] / ".env", override=True)
 
@@ -106,4 +110,52 @@ def ping() -> dict:
         return {"provider": name, "ok": True, "models": models, "model": MODEL}
     client = get_client()
     client.models.list()
+    return {"provider": name, "ok": True, "model": MODEL}
+
+
+def _ssl_verify() -> bool:
+    return str(_CFG.get("ssl_verify", "false")).lower() in {"1", "true", "yes"}
+
+
+async def fetch_access_token_async() -> str:
+    if not AUTH_KEY:
+        raise SystemExit("Missing GIGACHAT_API_KEY in .env")
+    async with httpx.AsyncClient(verify=_ssl_verify(), timeout=30) as client:
+        response = await client.post(
+            _CFG.get("oauth_url") or "https://ngw.devices.sberbank.ru:9443/api/v2/oauth",
+            headers={
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Accept": "application/json",
+                "RqUID": str(uuid.uuid4()),
+                "Authorization": f"Basic {AUTH_KEY}",
+            },
+            data={"scope": _CFG.get("scope") or "GIGACHAT_API_PERS"},
+        )
+    if response.status_code >= 400:
+        raise SystemExit(
+            f"GigaChat OAuth failed ({response.status_code}): {response.text[:500]}"
+        )
+    token = response.json().get("access_token")
+    if not token:
+        raise SystemExit(f"GigaChat OAuth: no access_token in {response.text[:500]}")
+    return token
+
+
+async def get_async_client() -> AsyncOpenAI:
+    if _is_gigachat():
+        return AsyncOpenAI(api_key=await fetch_access_token_async(), base_url=BASE_URL)
+    return AsyncOpenAI(api_key=AUTH_KEY or "ollama", base_url=BASE_URL)
+
+
+async def ping_async() -> dict:
+    name = provider_name()
+    if name == "ollama":
+        root = BASE_URL.replace("/v1", "")
+        async with httpx.AsyncClient(timeout=5) as client:
+            r = await client.get(f"{root}/api/tags")
+            r.raise_for_status()
+            models = [m.get("name") for m in r.json().get("models", [])]
+        return {"provider": name, "ok": True, "models": models, "model": MODEL}
+    client = await get_async_client()
+    await client.models.list()
     return {"provider": name, "ok": True, "model": MODEL}

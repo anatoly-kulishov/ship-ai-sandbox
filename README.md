@@ -28,7 +28,10 @@
 7. [07 · FastAPI](docs/07-fastapi.md)  
    Тот же план, но через HTTP API со Swagger.
 
-Дальше по плану: asyncio + async OpenAI client, потом vector DB.
+8. [08 · Asyncio](docs/08-asyncio.md)  
+   AsyncOpenAI: gateway не блокируется, пока ждёт LLM.
+
+Дальше по плану: PostgreSQL, потом Redis / vector DB.
 
 [План обучения](docs/LEARNING_PLAN.md)  
 [Что искать на YouTube](docs/YOUTUBE_SEARCH.md)
@@ -53,10 +56,12 @@ cp .env.example .env
 npm run hub                 # все уроки, http://localhost:8501
 npm run 01                  # один урок
 npm run 07                  # FastAPI на :8600
+npm run 08                  # async gateway на :8601
 npm run ollama:start
 npm run provider:ollama     # или provider:gigachat
 python 01-note-sorter/categorize.py "надо купить хлеб"
 python 07-fastapi/check.py
+python 08-asyncio/check.py
 ```
 
 Hub: сайдбар слева. На странице урока - expander **Конспект урока** (тот же текст, что в `docs/`).
