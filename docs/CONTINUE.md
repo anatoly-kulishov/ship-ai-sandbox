@@ -1,6 +1,6 @@
 # Контекст для нового чата · продолжаем учиться
 
-Дата снимка: **2026-10-09**. Открой этот файл в новом чате и скажи: «продолжай по `docs/CONTINUE.md`».
+Дата снимка: **2026-10-12**. Открой этот файл в новом чате и скажи: «продолжай по `docs/CONTINUE.md`».
 
 ---
 
@@ -30,7 +30,7 @@
 | 07 | `07-fastapi/` · [07-fastapi.md](./07-fastapi.md) | FastAPI gateway: health, POST /plan, POST /retrieve (фаза C / урок 06 плана) |
 | 08 | `08-asyncio/` · [08-asyncio.md](./08-asyncio.md) | AsyncOpenAI + concurrent demos (фаза C / урок 07 плана) |
 
-Стек sandbox: Streamlit hub (`app.py`, `pages/`), `lib/llm.py` / `lib/gigachat.py`, `.env` с GigaChat + Ollama.
+Стек sandbox: **Gradio** hub (`app.py`, навбар по урокам), `lib/llm.py` / `lib/ui.py`, `.env` с GigaChat + Ollama. FastAPI-уроки 07/08 - отдельные серверы.
 
 Запуск:
 
@@ -112,7 +112,7 @@ GIGACHAT_SSL_VERIFY=false
 
 Агент может залить из локального `.env`, если дать `VERCEL_TOKEN` (ключ GigaChat в чат не кидать).
 
-Sandbox `.env` - свой набор для Streamlit-уроков (тот же провайдер по смыслу).
+Sandbox `.env` - свой набор для Gradio-уроков (тот же провайдер по смыслу).
 
 ---
 
@@ -126,6 +126,7 @@ Sandbox `.env` - свой набор для Streamlit-уроков (тот же 
 6. Delivery: semver ветка, Whats new, `check:ai` в release-gate, GH Release.
 7. GGUF / Q4: модель выбирают по RAM, не по постеру; 24 GB Mac → 14B comfortable, 7B для JSON sandbox.
 8. FastAPI + AsyncOpenAI: LLM = долгое I/O; `await` + `gather`, sync-код через `to_thread`, не блокировать loop.
+9. UI учебы - Gradio multipage hub (навбар 01…08), конспект в accordion; логика уроков не в UI.
 
 ---
 

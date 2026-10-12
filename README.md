@@ -2,8 +2,8 @@
 
 Песочница **AI Application Engineer**: модель в продукте, не чат.
 
-С телефона удобнее читать **один урок за раз** (ссылки ниже).
-Код и запуск - с компьютера, внизу страницы.
+С телефона удобнее читать **один урок за раз** (ссылки ниже).  
+Код и Gradio-hub - с компьютера.
 
 ## Уроки
 
@@ -33,8 +33,7 @@
 
 Дальше по плану: PostgreSQL, потом Redis / vector DB.
 
-[План обучения](docs/LEARNING_PLAN.md)  
-[Что искать на YouTube](docs/YOUTUBE_SEARCH.md)
+[План обучения](docs/LEARNING_PLAN.md) · [Gradio hub](docs/gradio-hub.md) · [YouTube](docs/YOUTUBE_SEARCH.md)
 
 ---
 
@@ -55,8 +54,8 @@ cp .env.example .env
 ```bash
 npm run hub                 # все уроки, http://localhost:8501
 npm run 01                  # один урок
-npm run 07                  # FastAPI на :8600
-npm run 08                  # async gateway на :8601
+npm run 07                  # FastAPI API на :8600
+npm run 08                  # async API на :8601
 npm run ollama:start
 npm run provider:ollama     # или provider:gigachat
 python 01-note-sorter/categorize.py "надо купить хлеб"
@@ -64,7 +63,8 @@ python 07-fastapi/check.py
 python 08-asyncio/check.py
 ```
 
-Hub: сайдбар слева. На странице урока - expander **Конспект урока** (тот же текст, что в `docs/`).
+**Hub:** Gradio, навбар сверху по урокам. На странице - accordion **Конспект урока** (тот же текст, что в `docs/`).  
+Как пользоваться UI: [docs/gradio-hub.md](docs/gradio-hub.md).
 
 ---
 

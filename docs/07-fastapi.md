@@ -5,7 +5,7 @@
 LEARNING_PLAN: фаза C, урок 06. В sandbox папка `07-fastapi/`.
 
 ## Зачем
-LLM в продукте — это не Streamlit-виджет, а API. Рынок хочет **FastAPI + Pydantic** почти в каждой вакансии. Урок оборачивает уже готовую генерацию плана (04) и поиск по каталогу (05) в HTTP API со Swagger.
+LLM в продукте — это не Gradio-виджет, а API. Рынок хочет **FastAPI + Pydantic** почти в каждой вакансии. Урок оборачивает уже готовую генерацию плана (04) и поиск по каталогу (05) в HTTP API со Swagger.
 
 ## Простыми словами
 FastAPI — это тонкий слой, который принимает HTTP-запрос, проверяет тело по Pydantic-схеме, вызывает ту же Python-функцию и отдаёт JSON. `/docs` рисует формы автоматически.
@@ -20,8 +20,8 @@ FastAPI — это тонкий слой, который принимает HTTP
 |---|---|
 | `07-fastapi/server.py` | FastAPI app: `GET /health`, `POST /plan`, `POST /retrieve` |
 | `07-fastapi/check.py` | самопроверка через `TestClient` — без ручного curl |
+| `07-fastapi/app.py` | страница в Gradio-hub со ссылкой на Swagger |
 | `docs/07-fastapi.md` | этот конспект |
-| `pages/7_07_FastAPI.py` | страница хаба со ссылкой на Swagger |
 
 `server.py` не копирует логику генерации плана, а подгружает `04-gym-plan/generate.py` и `05-rag/embeddings.py` через `importlib` — тот же код, новый интерфейс.
 

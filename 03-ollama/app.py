@@ -1,4 +1,4 @@
-"""Streamlit UI for lesson 03 — local Ollama."""
+"""Gradio UI for lesson 03 — local Ollama."""
 
 from __future__ import annotations
 
@@ -6,66 +6,64 @@ import json
 import sys
 from pathlib import Path
 
-import streamlit as st
+import gradio as gr
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "01-note-sorter"))
 
 from categorize import categorize_note, format_result
+from lib import ui
 from lib.llm import BASE_URL, MODEL, ping, provider_name
 
 
-def render() -> None:
-    st.title("03 · Ollama (local LLM)")
-    st.caption("Тот же сортировщик, но модель на твоём компьютере")
-    with st.expander("Конспект урока"):
-        st.markdown((ROOT / "docs" / "03-ollama.md").read_text(encoding="utf-8"))
-
-    st.markdown(
-        f"""
-**LLM_PROVIDER:** `{provider_name()}`  
-**URL:** `{BASE_URL}`  
-**Модель:** `{MODEL}`
-
-Переключение в `.env`: `LLM_PROVIDER=ollama` или `gigachat`
-"""
-    )
-
-    try:
-        info = ping()
-        st.success(f"OK · models: {info.get('models', info.get('model'))}")
-    except Exception as e:
-        st.error(
-            "Ollama не отвечает. В терминале:\n\n"
-            "```bash\n"
-            "ollama serve\n"
-            "ollama pull qwen2.5:3b\n"
-            "```\n\n"
-            "В `.env`:\n"
-            "```\n"
-            "LLM_PROVIDER=ollama\n"
-            "```\n"
-            "и запусти `./scripts/start-ollama.sh`\n\n"
-            f"`{e}`"
+def build() -> gr.Blocks:
+    with ui.blocks("03 · Ollama") as demo:
+        ui.lesson_shell(
+            "03 · Ollama (local LLM)",
+            "Тот же сортировщик, но модель на твоём компьютере",
+            "03-ollama.md",
         )
-        return
+        gr.Markdown(
+            f"**LLM_PROVIDER:** `{provider_name()}`  \n"
+            f"**URL:** `{BASE_URL}`  \n"
+            f"**Модель:** `{MODEL}`  \n\n"
+            "Переключение: `npm run provider:ollama` / `provider:gigachat`"
+        )
+        ping_out = gr.Markdown()
+        note = gr.Textbox(label="Текст заметки", lines=4)
+        run = gr.Button("Классифицировать локально", variant="primary")
+        status = gr.Markdown()
+        raw = gr.Code(label="JSON", language="json")
 
-    note = st.text_area("Текст заметки", height=120, key="ollama_note")
-    if st.button("Классифицировать локально", type="primary", disabled=not note.strip()):
-        with st.spinner("Local LLM…"):
+        def do_ping():
             try:
-                result = categorize_note(note.strip())
+                info = ping()
+                return f"**OK** · models: `{info.get('models', info.get('model'))}`"
             except Exception as e:
-                st.error(str(e))
-            else:
-                st.success(format_result(result))
-                st.code(
-                    json.dumps(result.model_dump(mode="json"), ensure_ascii=False, indent=2),
-                    language="json",
+                return (
+                    "Ollama не отвечает.\n\n"
+                    "`npm run ollama:start` · в `.env`: `LLM_PROVIDER=ollama`\n\n"
+                    f"`{e}`"
                 )
+
+        def on_run(text: str):
+            text = (text or "").strip()
+            if not text:
+                return "Введи текст.", ""
+            try:
+                result = categorize_note(text)
+            except Exception as e:
+                return f"**Ошибка:** {e}", ""
+            return (
+                f"**OK.** {format_result(result)}",
+                json.dumps(result.model_dump(mode="json"), ensure_ascii=False, indent=2),
+            )
+
+        demo.load(do_ping, outputs=ping_out)
+        run.click(on_run, inputs=note, outputs=[status, raw])
+    return demo
 
 
 if __name__ == "__main__":
-    st.set_page_config(page_title="03 Ollama", page_icon="🦙", layout="centered")
-    render()
+    ui.launch(build(), port=8504)

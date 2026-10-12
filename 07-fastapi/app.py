@@ -1,44 +1,48 @@
-"""Hub UI for lesson 07 — FastAPI gateway."""
+"""Gradio guide page for lesson 07 — FastAPI gateway (server is separate)."""
 
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
-import streamlit as st
+import gradio as gr
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from lib import ui
 
 
-def render() -> None:
-    st.set_page_config(page_title="07 · FastAPI gateway", page_icon="🚀")
-    st.title("07 · FastAPI gateway")
-    st.caption("HTTP API над генератором плана и RAG retrieve")
-    with st.expander("Конспект урока"):
-        st.markdown((ROOT / "docs" / "07-fastapi.md").read_text(encoding="utf-8"))
+def build() -> gr.Blocks:
+    with ui.blocks("07 · FastAPI") as demo:
+        ui.lesson_shell(
+            "07 · FastAPI gateway",
+            "HTTP API над генератором плана и RAG retrieve",
+            "07-fastapi.md",
+        )
+        gr.Markdown(
+            """
+Этот урок - **отдельный FastAPI-сервер**, не виджет внутри Gradio.
 
-    st.markdown(
-        """
-        Этот урок не запускается внутри Streamlit — он **самостоятельный FastAPI-сервер**.
+### Запуск
+```bash
+npm run 07
+```
+Сервер: http://localhost:8600 · Swagger: http://localhost:8600/docs
 
-        ### Запуск
-        ```bash
-        npm run 07
-        ```
-        Сервер поднимется на `http://localhost:8600`.
+### Endpoints
+- `GET /health` - провайдер
+- `POST /plan` - brief → план
+- `POST /retrieve` - semantic search
 
-        ### Swagger UI
-        Открой `http://localhost:8600/docs` — там можно вызвать endpoints вручную:
-        - `GET /health` — проверка провайдера
-        - `POST /plan` — brief → план тренировки
-        - `POST /retrieve` — semantic search по каталогу
-
-        ### Самопроверка
-        ```bash
-        npm run check:07
-        ```
-        """
-    )
+### Самопроверка
+```bash
+npm run check:07
+```
+"""
+        )
+    return demo
 
 
 if __name__ == "__main__":
-    render()
+    ui.launch(build(), port=8508)

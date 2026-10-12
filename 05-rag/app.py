@@ -1,4 +1,4 @@
-"""Streamlit UI for lesson 05 — gym catalog RAG (embeddings + cosine)."""
+"""Gradio UI for lesson 05 — gym catalog RAG."""
 
 from __future__ import annotations
 
@@ -6,46 +6,65 @@ import json
 import sys
 from pathlib import Path
 
-import streamlit as st
+import gradio as gr
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from embeddings import build_embedding_index, load_catalog, load_embedding_index, retrieve
+from lib import ui
 from lib.llm import MODEL, provider_name
 
 
-def render() -> None:
-    st.title("05 · RAG (зал)")
-    st.caption("Brief → embeddings → cosine top-k по каталогу упражнений (без Qdrant)")
-    st.caption(f"`chat={provider_name()}` · `{MODEL}` · embeddings default `nomic-embed-text`")
-    with st.expander("Конспект урока"):
-        st.markdown((ROOT / "docs" / "05-rag.md").read_text(encoding="utf-8"))
-
+def _index_caption() -> str:
     catalog = load_catalog()
     index = load_embedding_index()
-    st.write(f"Каталог fixture: **{len(catalog)}** · индекс: **{len(index.get('items') or [])}** vec")
+    n_vec = len(index.get("items") or [])
+    return (
+        f"`chat={provider_name()}` · `{MODEL}` · embeddings `nomic-embed-text`  \n"
+        f"Каталог: **{len(catalog)}** · индекс: **{n_vec}** vec"
+    )
 
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("Собрать embeddings индекс", type="secondary"):
-            with st.spinner("Ollama nomic-embed-text…"):
-                payload = build_embedding_index(catalog)
-            st.success(f"OK · {len(payload['items'])} × {payload['dims']}")
-            st.rerun()
-    with col2:
-        st.caption("Нужен `ollama pull nomic-embed-text`")
 
-    brief = st.text_input("Brief", value="хочу накачать банки")
-    top_k = st.slider("top-k", 5, 40, 15)
+def build() -> gr.Blocks:
+    with ui.blocks("05 · RAG") as demo:
+        ui.lesson_shell(
+            "05 · RAG (зал)",
+            "Brief → embeddings → cosine top-k (без Qdrant)",
+            "05-rag.md",
+        )
+        meta = gr.Markdown(_index_caption())
+        build_btn = gr.Button("Собрать embeddings индекс", variant="secondary")
+        build_status = gr.Markdown("Нужен `ollama pull nomic-embed-text`")
+        brief = gr.Textbox(label="Brief", value="хочу накачать банки")
+        top_k = gr.Slider(5, 40, value=15, step=1, label="top-k")
+        run = gr.Button("Retrieve", variant="primary")
+        status = gr.Markdown()
+        table = gr.Dataframe(label="Top-k", interactive=False)
+        raw = gr.Code(label="Первые 5 (JSON)", language="json")
 
-    if st.button("Retrieve", type="primary", disabled=not brief.strip()):
-        if not (index.get("items") or []):
-            st.warning("Индекс пуст — сначала собери embeddings")
-        else:
-            with st.spinner("embed brief + cosine…"):
-                hits = retrieve(brief.strip(), top_k=top_k)
+        def on_build():
+            try:
+                payload = build_embedding_index(load_catalog())
+            except Exception as e:
+                return f"**Ошибка сборки:** {e}", _index_caption()
+            return (
+                f"**OK** · {len(payload['items'])} × dims={payload['dims']}",
+                _index_caption(),
+            )
+
+        def on_retrieve(text: str, k: float):
+            text = (text or "").strip()
+            if not text:
+                return "Введи brief.", [], ""
+            index = load_embedding_index()
+            if not (index.get("items") or []):
+                return "Индекс пуст — сначала собери embeddings.", [], ""
+            try:
+                hits = retrieve(text, top_k=int(k))
+            except Exception as e:
+                return f"**Ошибка:** {e}", [], ""
             rows = [
                 {
                     "id": ex["id"],
@@ -56,10 +75,16 @@ def render() -> None:
                 }
                 for ex in hits
             ]
-            st.dataframe(rows, use_container_width=True)
-            st.code(json.dumps(rows[:5], ensure_ascii=False, indent=2), language="json")
+            return (
+                f"**{len(rows)}** упражнений",
+                rows,
+                json.dumps(rows[:5], ensure_ascii=False, indent=2),
+            )
+
+        build_btn.click(on_build, outputs=[build_status, meta])
+        run.click(on_retrieve, inputs=[brief, top_k], outputs=[status, table, raw])
+    return demo
 
 
 if __name__ == "__main__":
-    st.set_page_config(page_title="05 RAG", page_icon="🔎", layout="centered")
-    render()
+    ui.launch(build(), port=8506)

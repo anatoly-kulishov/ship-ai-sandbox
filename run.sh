@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
 # Usage: ./run.sh          → hub
 #        ./run.sh 01       → only lesson 01
-#        ./run.sh 02       → only lesson 02
 set -euo pipefail
 cd "$(dirname "$0")"
 # shellcheck disable=SC1091
 source .venv/bin/activate
 
 case "${1:-hub}" in
-  hub|"" ) exec streamlit run app.py --server.port 8501 ;;
-  01|1)    exec streamlit run 01-note-sorter/app.py --server.port 8502 ;;
-  02|2)    exec streamlit run 02-tool-use/app.py --server.port 8503 ;;
-  03|3)    exec streamlit run 03-ollama/app.py --server.port 8504 ;;
-  04|4)    exec streamlit run 04-gym-plan/app.py --server.port 8505 ;;
-  05|5)    exec streamlit run 05-rag/app.py --server.port 8506 ;;
-  06|6)    exec streamlit run 06-gguf/app.py --server.port 8507 ;;
+  hub|"" ) exec python app.py ;;
+  01|1)    exec python 01-note-sorter/app.py ;;
+  02|2)    exec python 02-tool-use/app.py ;;
+  03|3)    exec python 03-ollama/app.py ;;
+  04|4)    exec python 04-gym-plan/app.py ;;
+  05|5)    exec python 05-rag/app.py ;;
+  06|6)    exec python 06-gguf/app.py ;;
+  07|7)    exec uvicorn --app-dir 07-fastapi server:app --port 8600 --reload ;;
+  08|8)    exec uvicorn --app-dir 08-asyncio server:app --port 8601 --reload ;;
   *)
-    echo "Usage: ./run.sh [hub|01|02|03|04|05|06]"
+    echo "Usage: ./run.sh [hub|01|02|03|04|05|06|07|08]"
     exit 1
     ;;
 esac

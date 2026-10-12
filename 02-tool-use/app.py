@@ -1,4 +1,4 @@
-"""Streamlit UI for tool-use note saver."""
+"""Gradio UI for lesson 02 — tool use → SQLite."""
 
 from __future__ import annotations
 
@@ -6,49 +6,53 @@ import json
 import sys
 from pathlib import Path
 
-import streamlit as st
+import gradio as gr
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from agent import list_notes, process_note
+from lib import ui
 
 
-def render() -> None:
-    st.title("02 · Tool Use")
-    st.caption("Модель вызывает save_note() → запись в SQLite")
-    with st.expander("Конспект урока"):
-        st.markdown((ROOT / "docs" / "02-tool-use.md").read_text(encoding="utf-8"))
+def build() -> gr.Blocks:
+    with ui.blocks("02 · Tool Use") as demo:
+        ui.lesson_shell(
+            "02 · Tool Use",
+            "Модель вызывает `save_note()` → запись в SQLite",
+            "02-tool-use.md",
+        )
+        note = gr.Textbox(label="Текст заметки", lines=4, placeholder="Введи заметку…")
+        run = gr.Button("Сохранить через tool", variant="primary")
+        status = gr.Markdown()
+        raw = gr.Code(label="Ответ tool", language="json")
+        table = gr.Dataframe(label="Последние заметки", interactive=False)
 
-    note = st.text_area(
-        "Текст заметки",
-        height=120,
-        placeholder="Введи заметку…",
-        key="tool_note",
-    )
+        def refresh_table():
+            rows = list_notes(15)
+            if not rows:
+                return []
+            return rows
 
-    if st.button("Сохранить через tool", type="primary", disabled=not note.strip()):
-        with st.spinner("GigaChat → tool call…"):
+        def on_run(text: str):
+            text = (text or "").strip()
+            if not text:
+                return "Введи текст.", "", refresh_table()
             try:
-                result = process_note(note.strip())
+                result = process_note(text)
             except Exception as e:
-                st.error(str(e))
-            else:
-                st.success(
-                    f"Сохранено #{result['id']}: {result['category']}, "
-                    f"urgent={result['urgent']}"
-                )
-                st.code(json.dumps(result, ensure_ascii=False, indent=2), language="json")
+                return f"**Ошибка:** {e}", "", refresh_table()
+            msg = (
+                f"**Сохранено #{result['id']}:** {result['category']}, "
+                f"urgent={result['urgent']}"
+            )
+            return msg, json.dumps(result, ensure_ascii=False, indent=2), refresh_table()
 
-    st.subheader("Последние заметки")
-    rows = list_notes(15)
-    if not rows:
-        st.info("База пуста")
-    else:
-        st.dataframe(rows, use_container_width=True)
+        demo.load(fn=refresh_table, outputs=table)
+        run.click(on_run, inputs=note, outputs=[status, raw, table])
+    return demo
 
 
 if __name__ == "__main__":
-    st.set_page_config(page_title="Tool Use · Notes", page_icon="🛠", layout="centered")
-    render()
+    ui.launch(build(), port=8503)
