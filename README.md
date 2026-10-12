@@ -31,9 +31,21 @@
 8. [08 · Asyncio](docs/08-asyncio.md)  
    AsyncOpenAI: gateway не блокируется, пока ждёт LLM.
 
-Дальше по плану: PostgreSQL, потом Redis / vector DB.
+9. [09 · Chunking](docs/09-chunking.md)  
+   Документы → чанки с overlap и `source`.
 
-[План обучения](docs/LEARNING_PLAN.md) · [Gradio hub](docs/gradio-hub.md) · [YouTube](docs/YOUTUBE_SEARCH.md)
+10. [10 · Chroma RAG](docs/10-chroma-rag.md)  
+    Docs-RAG: Chroma + Ollama embeddings + «не знаю».
+
+11. [11 · LangChain RAG](docs/11-langchain-rag.md)  
+    Тот же RAG через тонкий LangChain.
+
+12. [12 · PostgreSQL](docs/12-postgres.md)  
+    LLM-вызов → строка в `events` (JSONB).
+
+Дальше по плану: Redis, agents, Docker.
+
+[План](docs/LEARNING_PLAN.md) · [Теория](docs/theory/README.md) · [Ed Donner карта](docs/sources/ed-donner.md) · [Gradio hub](docs/gradio-hub.md) · [YouTube](docs/YOUTUBE_SEARCH.md) · [CONTINUE](docs/CONTINUE.md)
 
 ---
 
@@ -53,18 +65,17 @@ cp .env.example .env
 
 ```bash
 npm run hub                 # все уроки, http://localhost:8501
-npm run 01                  # один урок
-npm run 07                  # FastAPI API на :8600
-npm run 08                  # async API на :8601
+npm run 09                  # chunking
+npm run check:09
 npm run ollama:start
-npm run provider:ollama     # или provider:gigachat
-python 01-note-sorter/categorize.py "надо купить хлеб"
-python 07-fastapi/check.py
-python 08-asyncio/check.py
+ollama pull nomic-embed-text
+npm run check:10:ingest && npm run check:10
+npm run check:11:ingest && npm run check:11
+npm run postgres:up
+npm run check:12
 ```
 
-**Hub:** Gradio, навбар сверху по урокам. На странице - accordion **Конспект урока** (тот же текст, что в `docs/`).  
-Как пользоваться UI: [docs/gradio-hub.md](docs/gradio-hub.md).
+**Hub:** Gradio, навбар сверху по урокам. Accordion **Конспект урока** = текст из `docs/`.
 
 ---
 
@@ -72,10 +83,11 @@ python 08-asyncio/check.py
 
 1. LLM в продукте отвечает **схемой**, не абзацем.
 2. Промпт = правила. Проверка - **твой код** (Pydantic, whitelist).
-3. Побочные эффекты (БД) делает код, не модель.
-4. Провайдер меняется в `.env`: `LLM_PROVIDER=gigachat` или `ollama`.
-5. Сначала ищем по каталогу (RAG), потом генерируем план.
+3. Сначала retrieve (каталог или docs), потом генерация.
+4. Chunking → vector store → «не знаю», если нет в контексте.
+5. LangChain - после своего RAG, не вместо.
 
 ---
 
-Учебный репозиторий, форкай свободно.
+Учебный репозиторий, форкай свободно.  
+Идеи лекций частично из курса Ed Donner (MIT) - см. [docs/sources/ed-donner.md](docs/sources/ed-donner.md).

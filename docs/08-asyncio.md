@@ -1,6 +1,6 @@
 # 08 · Asyncio + AsyncOpenAI
 
-[Уроки](../README.md#уроки) · [← 07](./07-fastapi.md)
+[Уроки](../README.md#уроки) · [← 07](./07-fastapi.md) · [09 →](./09-chunking.md)
 
 LEARNING_PLAN: фаза C, урок 07. В sandbox папка `08-asyncio/`.
 
@@ -64,7 +64,9 @@ curl -X POST http://localhost:8601/demo/sleep \
 ## Что запомнить
 LLM-gateway на FastAPI почти всегда async. Ждёшь сеть - `await`. Старый sync - `to_thread`, не блокируй loop руками.
 
-## Дальше
-План: PostgreSQL (логи/диалоги), потом Redis (кэш эмбеддингов или rate limit).
+Теория рядом: Ed guide async → у нас этот урок; agents: [theory/06](./theory/06-agents-react.md).
 
-[Уроки](../README.md#уроки) · [← 07](./07-fastapi.md) · [план](./LEARNING_PLAN.md)
+## Дальше
+Урок 09: **chunking** → 10 Chroma → 11 LangChain. Postgres - после (`12-postgres`).
+
+[Уроки](../README.md#уроки) · [← 07](./07-fastapi.md) · [09 →](./09-chunking.md)

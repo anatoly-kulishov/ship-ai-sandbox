@@ -57,8 +57,10 @@ Hub → **05 RAG** или `npm run 05`.
 ## Что запомнить
 Сначала узкий список из справочника, потом LLM. Иначе модель фантазирует упражнения.
 
+Теория рядом: [vector stores](./theory/05-vector-stores.md) · дальше docs-RAG: [09](./09-chunking.md)→[10](./10-chroma-rag.md).
+
 ## Дальше
-Урок 12 плана: Qdrant или pgvector, когда JSON-файл станет тесным.  
+Docs-RAG: [09 chunking](./09-chunking.md) → [10 Chroma](./10-chroma-rag.md) → [11 LangChain](./11-langchain-rag.md).  
 Урок 06 sandbox: какая локальная модель влезет в твой RAM.
 
 [Уроки](../README.md#уроки) · [← 04](./04-gym-plan.md) · [06 →](./06-gguf.md)

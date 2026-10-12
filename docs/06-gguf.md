@@ -58,6 +58,8 @@ Hub → **06 GGUF** или `npm run 06`.
 ## Что запомнить
 On-prem ждут выбор модели по железу. Квантизация - как впихнуть 7B/14B в ноутбук.
 
+Теория рядом: [tokens/context](./theory/01-tokens-context.md).
+
 ## Дальше
 → [07 · FastAPI](./07-fastapi.md)
 

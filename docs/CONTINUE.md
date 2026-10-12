@@ -8,174 +8,55 @@
 
 - **Цель роли:** AI Application Engineer - LLM в продукт (API, RAG, tools, качество, деплой).
 - **План:** [`LEARNING_PLAN.md`](./LEARNING_PLAN.md)
-- **Песочница (уроки):** `/Users/kulishov.a3/WebstormProjects/ship-ai-sandbox`
-- **Продукт (мост в прод):** `/Users/kulishov.a3/WebstormProjects/repdraft` → [Repdraft v0.18.0](https://github.com/anatoly-kulishov/Repdraft/releases/tag/v0.18.0)
+- **Теория:** [`theory/`](./theory/README.md) · [`sources/ed-donner.md`](./sources/ed-donner.md)
+- **Песочница:** `/Users/kulishov.a3/WebstormProjects/ship-ai-sandbox`
+- **Продукт:** `/Users/kulishov.a3/WebstormProjects/repdraft` → [Repdraft v0.18.0](https://github.com/anatoly-kulishov/Repdraft/releases/tag/v0.18.0)
 
-Принцип: один навык за урок в sandbox → тот же навык в Repdraft, когда готов.
-
-Конспект обязателен: `docs/NN-*.md` простым языком (зачем / как сделали / как работает). Без md урок не закрыт.
+Конспект обязателен: `docs/NN-*.md` простым языком.
 
 ---
 
 ## Уже закрыто в sandbox
 
-| Урок | Папка / Hub | Навык |
-|---|---|---|
-| 01 | `01-note-sorter/` · [01-note-sorter.md](./01-note-sorter.md) | Structured output + Pydantic |
-| 02 | `02-tool-use/` · [02-tool-use.md](./02-tool-use.md) | Tool use → SQLite |
-| 03 | `03-ollama/` · [03-ollama.md](./03-ollama.md) | Local LLM (Ollama) |
-| 04 | `04-gym-plan/` · [04-gym-plan.md](./04-gym-plan.md) | Gym plan + catalog whitelist |
-| 05 | `05-rag/` · [05-rag.md](./05-rag.md) | Embeddings + cosine по каталогу (фаза D / урок 11) |
-| 06 | `06-gguf/` · [06-gguf.md](./06-gguf.md) | GGUF / Q4-Q8, модель под RAM (фаза B / урок 04 плана) |
-| 07 | `07-fastapi/` · [07-fastapi.md](./07-fastapi.md) | FastAPI gateway: health, POST /plan, POST /retrieve (фаза C / урок 06 плана) |
-| 08 | `08-asyncio/` · [08-asyncio.md](./08-asyncio.md) | AsyncOpenAI + concurrent demos (фаза C / урок 07 плана) |
+| Урок | Навык |
+|---|---|
+| 01–11 | structured → tools → Ollama → gym → cosine RAG → GGUF → FastAPI → asyncio → chunking → Chroma → LangChain |
+| **12** | `12-postgres/` · [12-postgres.md](./12-postgres.md) · Postgres `events` JSONB |
 
-Стек sandbox: **Gradio** hub (`app.py`, навбар по урокам), `lib/llm.py` / `lib/ui.py`, `.env` с GigaChat + Ollama. FastAPI-уроки 07/08 - отдельные серверы.
-
-Запуск:
+Animator/whiteboard - эксперимент, **не** часть трека. Медиа в `docs/media/` можно игнорить.
 
 ```bash
-cd /Users/kulishov.a3/WebstormProjects/ship-ai-sandbox
-# .venv уже есть
-npm run 08
-python 08-asyncio/check.py
+npm run postgres:up
+npm run check:12
+npm run check:12:llm
+npm run 12          # :8602
 ```
 
----
-
-## Продуктовый мост: Repdraft `/ai` (v0.18.0)
-
-**Смержено в `main`, релиз:** https://github.com/anatoly-kulishov/Repdraft/releases/tag/v0.18.0 · PR #91
-
-### Что умеет пользователь
-
-- **Черновик с ИИ** на `/ai` (не lab): brief → план из whitelist каталога.
-- Входы: пустые **Тренировки** («Черновик с ИИ» + Sparkles) и пустой **билдер** («Собрать с ИИ» + Sparkles).
-- В **Аккаунте** ссылки на ИИ **нет** (продукт, не бета).
-- **Сценарии** (`/scenarios`) доступны всем из Аккаунта; QA-док актуализирован под `/ai`.
-- Flow-chrome как у билдера: без RP-лого и tabbar.
-- `/lab/ai` → 308 на `/ai`.
-
-### Архитектура (сервер)
-
-| Модуль | Путь | Роль |
-|---|---|---|
-| API | `src/routes/api/ai/plan/+server.ts` | `GET` availability, `POST` generate |
-| UI | `src/routes/ai/+page.svelte` | composer, чипы зон, план → билдер |
-| Generate | `src/lib/server/ai/generatePlan.ts` | LLM + parse + whitelist + zone filter + pad |
-| Retrieve | `src/lib/server/ai/retrieve.ts` | hybrid cosine∪regex; fallback regex |
-| Catalog hints | `src/lib/server/ai/catalog.ts` | slang/зоны, slim zone-first |
-| Templates | `src/lib/server/ai/splitTemplates.ts` | push/pull/arms… |
-| Embeddings | `src/lib/server/ai/embeddings.ts` + `embedText.ts` | Ollama default; GigaChat embeddings часто 402 |
-| Config | `src/lib/server/ai/config.ts` | `AI_PROVIDER` gigachat \| ollama |
-| Gate | `npm run check:ai` | все `*.selfcheck.ts` под `src/lib/server/ai/` |
-
-Важные инварианты (уже в adversarial):
-
-- Zone brief: prompt/pad **только** из зоны; пустой pool → `invalid_plan` (не fallback на весь каталог).
-- «булки» → ноги; «предплечье» ≠ плечи; word-boundary для EN (`back`/`leg`).
-- `droppedUnknownIds` = только unknown ids, не zone drops.
-
-### Embeddings / RAG в продукте
-
-- Файл: `static/data/exercises.embeddings.json` - сейчас **пустой stub** (`items: []`) → runtime всегда **regex**.
-- Hybrid включается после: `npm run build:embeddings` (Ollama `nomic-embed-text`).
-- В Whats new **не** заявляли RAG/hybrid - честный ship regex + zone templates.
-
-### Нативный splash (в том же релизе)
-
-- Тёмный splash Capacitor, `launchAutoHide: false`, dismiss после web boot.
-- Android `colors.xml` + styles SplashScreen API; iOS imageset; `scripts/generate-brand-icons.mjs`.
-
-### Баг, починенный перед релизом
-
-- Петля **←** `/auth` ↔ `/scenarios`: у сценариев был `preferHistoryBack={false}` → push `/auth` в history. Исправлено на history.back (как terms/privacy).
+`DATABASE_URL=postgresql://ship:ship@127.0.0.1:5432/ship_ai` (Homebrew `postgresql@16`).
 
 ---
 
-## Секреты / прод (открытый хвост)
+## Прод-мост Repdraft
 
-Локально в `repdraft/.env` ключи GigaChat **есть**. На **Vercel Production** private env для чата, скорее всего, **ещё нет** → `/ai` показывает «ИИ недоступен».
+`/ai` в v0.18.0. Хвост: Vercel `GIGACHAT_*` на Production; embeddings stub → regex.
 
-Нужно (не `PUBLIC_*`):
+---
+
+## Дальше
+
+| Приоритет | Тема |
+|---|---|
+| 1 | Redis (кэш эмбеддингов / rate limit) |
+| 2 | Agents (фаза E; теория в `theory/06`) |
+| 3 | Docker compose gateway+Postgres |
+| 4 | Прод: Vercel secrets |
+
+---
+
+## Стартовый промпт
 
 ```text
-AI_PROVIDER=gigachat
-GIGACHAT_API_KEY=…
-GIGACHAT_MODEL=GigaChat-2
-GIGACHAT_SSL_VERIFY=false
+Продолжаем по docs/CONTINUE.md в ship-ai-sandbox.
+Уроки 01–12 закрыты (Postgres events есть).
+Следующий шаг: Redis или agents — один навык.
 ```
-
-Опционально: `GIGACHAT_BASE_URL`, `GIGACHAT_OAUTH_URL`, `GIGACHAT_SCOPE`.
-
-Проверка: `GET /api/ai/plan` → `{"available":true,"provider":"gigachat"}`, затем Redeploy.
-
-Агент может залить из локального `.env`, если дать `VERCEL_TOKEN` (ключ GigaChat в чат не кидать).
-
-Sandbox `.env` - свой набор для Gradio-уроков (тот же провайдер по смыслу).
-
----
-
-## Чему научились на практике (связка план ↔ прод)
-
-1. Structured JSON / function calling (GigaChat) vs `json_object` (Ollama).
-2. Trust boundary: LLM выбирает только id из whitelist.
-3. Retrieve перед генерацией: regex-хинты + (опционально) embeddings.
-4. Zone leaks = реальная прод-проблема; adversarial selfchecks как регрессии.
-5. Productize: lab → `/ai`, entry points, i18n `aiDraft.*`, flow chrome, сценарии.
-6. Delivery: semver ветка, Whats new, `check:ai` в release-gate, GH Release.
-7. GGUF / Q4: модель выбирают по RAM, не по постеру; 24 GB Mac → 14B comfortable, 7B для JSON sandbox.
-8. FastAPI + AsyncOpenAI: LLM = долгое I/O; `await` + `gather`, sync-код через `to_thread`, не блокировать loop.
-9. UI учебы - Gradio multipage hub (навбар 01…08), конспект в accordion; логика уроков не в UI.
-
----
-
-## Что делать дальше (обучение)
-
-Ориентир - [`LEARNING_PLAN.md`](./LEARNING_PLAN.md). Логичный порядок после 08:
-
-| Приоритет | Тема плана | Идея следующего урока в sandbox |
-|---|---|---|
-| 1 | C · урок 08 | **PostgreSQL** — логи/диалоги рядом с FastAPI |
-| 2 | C · урок 09 | Redis: кэш эмбеддингов или rate limit |
-| 3 | D · урок 12 | Qdrant или pgvector (сейчас cosine руками) |
-| 4 | E · agents | после tools+RAG |
-| 5 | Прод | Залить Vercel secrets; опционально `build:embeddings` |
-
-Видео-запросы: [`YOUTUBE_SEARCH.md`](./YOUTUBE_SEARCH.md).
-
----
-
-## Команды-якоря
-
-```bash
-# Sandbox async gateway
-cd /Users/kulishov.a3/WebstormProjects/ship-ai-sandbox
-python 08-asyncio/check.py
-
-# Repdraft AI gate
-cd /Users/kulishov.a3/WebstormProjects/repdraft
-npm run check:ai
-# optional hybrid:
-# npm run build:embeddings
-```
-
----
-
-## Стартовый промпт для нового чата
-
-```text
-Продолжаем обучение по docs/CONTINUE.md в ship-ai-sandbox.
-Репозитории: ship-ai-sandbox (уроки) и repdraft (продукт, /ai уже в v0.18.0).
-Следующий шаг: урок 09 · PostgreSQL (не всё сразу).
-08-asyncio уже есть. Открытый хвост прода: Vercel GIGACHAT_* для /ai.
-```
-
----
-
-## Ссылки
-
-- План: [LEARNING_PLAN.md](./LEARNING_PLAN.md)
-- Уроки: [01](./01-note-sorter.md) · [02](./02-tool-use.md) · [03](./03-ollama.md) · [04](./04-gym-plan.md) · [05](./05-rag.md) · [06](./06-gguf.md) · [07](./07-fastapi.md) · [08](./08-asyncio.md)
-- Repdraft release: https://github.com/anatoly-kulishov/Repdraft/releases/tag/v0.18.0
-- Прод preview/prod: `https://repdraft-zeta.vercel.app` (из `.env.example`)

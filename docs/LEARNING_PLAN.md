@@ -11,7 +11,8 @@
 
 Принцип: один навык за урок, простой язык, пример в `ship-ai-sandbox`. Темп любой.
 
-Видео-запросы: [YOUTUBE_SEARCH.md](./YOUTUBE_SEARCH.md) · конспекты: [01](./01-note-sorter.md) … [08](./08-asyncio.md)
+Видео-запросы: [YOUTUBE_SEARCH.md](./YOUTUBE_SEARCH.md) · конспекты: [01](./01-note-sorter.md) … [11](./11-langchain-rag.md)  
+Теория: [theory/](./theory/README.md) · карта курса Ed Donner: [sources/ed-donner.md](./sources/ed-donner.md)
 
 **Новый чат:** снимок прогресса и прод-моста - [CONTINUE.md](./CONTINUE.md).
 
@@ -59,6 +60,10 @@
 | 06 | GGUF / квантизация, модель под RAM (`06-gguf/`) | must (фаза B урок 04) |
 | 07 | FastAPI gateway (`07-fastapi/`) | must (фаза C урок 06) |
 | 08 | asyncio + AsyncOpenAI (`08-asyncio/`) | must (фаза C урок 07) |
+| 09 | Chunking + overlap (`09-chunking/`) | must (фаза D урок 10) |
+| 10 | Chroma docs-RAG (`10-chroma-rag/`) | must (фаза D 12–13) |
+| 11 | LangChain RAG thin (`11-langchain-rag/`) | must (фаза D урок 14) |
+| 12 | PostgreSQL event log (`12-postgres/`) | must (фаза C урок 08) |
 
 ---
 
@@ -97,12 +102,12 @@ User ──► FastAPI (async) ──┤
 
 | # | Тема | Готово, когда |
 |---|---|---|
-| A1 | Tokens, context window | объясняешь «почему обрезало» |
-| A2 | Temperature / top_p | для классификации ставишь 0 |
-| A3 | System vs user prompt | пишешь контракт API |
+| A1 | Tokens, context window | [theory/01](./theory/01-tokens-context.md) |
+| A2 | Temperature / top_p | [theory/02](./theory/02-prompts-temperature.md) |
+| A3 | System vs user prompt | theory/02 + урок 01 |
 | A4 | Structured output + Pydantic | урок 01 |
 | A5 | Function calling / tools | урок 02 |
-| A6 | Prompt-паттерны: few-shot, CoT, ReAct (теория) | узнаёшь по названию и применяешь few-shot |
+| A6 | Prompt-паттерны: few-shot, CoT, ReAct (теория) | theory/02 · [agents](./theory/06-agents-react.md) |
 
 **Срок:** 1–2 недели (с учётом 01–02).
 
@@ -155,9 +160,11 @@ User ──► FastAPI (async) ──┤
 
 **Готово:** объясняешь, почему gateway async, и `check:08` зелёный.
 
-### Урок 08 · PostgreSQL
+### Урок 08 · PostgreSQL ✅ в репо
 
-Заметки/диалоги/логи в Postgres (не только SQLite)
+- Папка `12-postgres/`, Hub **12 Postgres**, API `:8602`
+- Таблица `events` (JSONB), `POST /classify` + `POST /plan` пишут лог
+- См. [12-postgres.md](./12-postgres.md)
 
 ### Урок 09 · Redis (коротко)
 
@@ -173,11 +180,11 @@ User ──► FastAPI (async) ──┤
 
 | Урок | Тема | Готово |
 |---|---|---|
-| 10 | Chunking + overlap | видишь чанки с `source` |
+| 10 | Chunking + overlap | **09-chunking/** + [theory/04](./theory/04-chunking.md) |
 | 11 | Embeddings + cosine | **05-rag/** top-k по brief зала |
-| 12 | Vector DB: **Qdrant или pgvector** (один!) | top-k по вопросу |
-| 13 | Full RAG + citations + «не знаю» | чат по docs |
-| 14 | LangChain **или** LlamaIndex | тот же RAG на фреймворке |
+| 12 | Vector DB: **Chroma** (старт) → позже Qdrant/pgvector | **10-chroma-rag/** |
+| 13 | Full RAG + citations + «не знаю» | **10** ask по Fitllm KB |
+| 14 | LangChain **или** LlamaIndex | **11-langchain-rag/** |
 
 **Срок фазы D:** 6–10 недель.
 
@@ -297,6 +304,6 @@ User ──► FastAPI (async) ──┤
 
 ## Следующий шаг
 
-**PostgreSQL** (план C·08, sandbox будет `09-postgres`) — логи/диалоги не только в SQLite.
+Закрепи Postgres: `npm run postgres:up` → `npm run check:12` → `check:12:llm`.
 
-Или закрепи asyncio: `npm run check:08` и Hub → **08 Asyncio**.
+Дальше: **Redis** (кэш/rate limit) или **agents** (фаза E).

@@ -57,6 +57,8 @@ curl -X POST http://localhost:8600/plan \
 ## Что запомнить
 FastAPI — это не новый ИИ, это **стандартный способ отдать LLM-функцию по HTTP**. Контракт запроса/ответа — Pydantic. Ошибки — HTTP-статусы. Всё остальное (prompt, whitelist, RAG) остаётся прежним.
 
+Теория рядом: [openai-compatible](./theory/03-openai-compatible.md) · позже [docker](./theory/08-docker-basics.md).
+
 ## Дальше
 Урок 08: **asyncio + AsyncOpenAI** — `npm run 08`, порт 8601.
 

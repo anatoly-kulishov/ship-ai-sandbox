@@ -1,0 +1,21 @@
+# Optional: when Docker Desktop is available.
+# Lesson 12 also works with Homebrew: npm run postgres:up
+services:
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ship
+      POSTGRES_PASSWORD: ship
+      POSTGRES_DB: ship_ai
+    volumes:
+      - ship_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ship -d ship_ai"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  ship_pg:

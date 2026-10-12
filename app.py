@@ -22,6 +22,10 @@ LESSONS: list[tuple[str, str, str]] = [
     ("06 · GGUF", "/06", "06-gguf"),
     ("07 · FastAPI", "/07", "07-fastapi"),
     ("08 · Asyncio", "/08", "08-asyncio"),
+    ("09 · Chunking", "/09", "09-chunking"),
+    ("10 · Chroma", "/10", "10-chroma-rag"),
+    ("11 · LangChain", "/11", "11-langchain-rag"),
+    ("12 · Postgres", "/12", "12-postgres"),
 ]
 
 
@@ -45,6 +49,8 @@ def build_hub() -> gr.Blocks:
 
 Выбери урок в **навигации сверху**. На каждой странице - accordion **Конспект урока**.
 
+Теория (Ed Donner → наши заметки): [`docs/theory/`](docs/theory/README.md) · карта: [`docs/sources/ed-donner.md`](docs/sources/ed-donner.md)
+
 | Урок | Навык | Конспект |
 |---|---|---|
 | 01 | system prompt → JSON → Pydantic | `docs/01-note-sorter.md` |
@@ -55,11 +61,15 @@ def build_hub() -> gr.Blocks:
 | 06 | GGUF / Q4-Q8 под RAM | `docs/06-gguf.md` |
 | 07 | FastAPI gateway (:8600) | `docs/07-fastapi.md` |
 | 08 | AsyncOpenAI (:8601) | `docs/08-asyncio.md` |
+| 09 | chunking + overlap | `docs/09-chunking.md` |
+| 10 | Chroma docs-RAG | `docs/10-chroma-rag.md` |
+| 11 | LangChain RAG | `docs/11-langchain-rag.md` |
+| 12 | Postgres event log | `docs/12-postgres.md` |
 
 ```bash
 npm run provider:ollama   # или gigachat
-npm run ollama:start      # для local
-npm run check:01          # CLI без UI
+npm run postgres:up       # урок 12
+npm run check:12
 ```
 """
         )
