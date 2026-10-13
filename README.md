@@ -1,6 +1,6 @@
 # ship-ai-sandbox
 
-### **LLM in the product — not in the chat.**
+### **LLM in the product - not in the chat.**
 
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![Topics](https://img.shields.io/badge/topics-structured%20output%20·%20tools%20·%20RAG-111111.svg)](#-lessons)
@@ -12,9 +12,9 @@
 
 ---
 
-Песочница **AI Application Engineer**: structured output, Pydantic validation, tool calling, local LLMs (Ollama), RAG, FastAPI, async, PostgreSQL — на практике, урок за уроком.
+Песочница **AI Application Engineer**: structured output, Pydantic validation, tool calling, local LLMs (Ollama), RAG, FastAPI, async, PostgreSQL - на практике, урок за уроком.
 
-С телефона удобнее читать **один урок** (ссылки ниже). Код и Gradio-hub — с компьютера.
+С телефона удобнее читать **один урок** (ссылки ниже). Код и Gradio-hub - с компьютера.
 
 **Keywords:** AI Application Engineer, structured output, Pydantic, function calling, GigaChat, Ollama, RAG, Chroma, LangChain, FastAPI, asyncio, embeddings, GGUF.
 
@@ -25,7 +25,7 @@
 | Without a sandbox | With ship-ai-sandbox |
 | :--- | :--- |
 | LLM отвечает «текстом», схема ломается в проде | JSON + Pydantic на каждом шаге |
-| Tool calling — магия из доки | Свой `save_note` → SQLite, прозрачный цикл |
+| Tool calling - магия из доки | Свой `save_note` → SQLite, прозрачный цикл |
 | RAG = «подключил LangChain» | Сначала свой retrieve, потом тонкий LangChain |
 | Теория отдельно от кода | Урок = конспект + runnable check |
 
@@ -62,7 +62,7 @@ flowchart LR
 | 11 | [LangChain RAG](docs/11-langchain-rag.md) | Same RAG via thin LangChain |
 | 12 | [PostgreSQL](docs/12-postgres.md) | LLM call → `events` JSONB row |
 
-Next on the plan: Redis, agents, Docker — see [LEARNING_PLAN.md](docs/LEARNING_PLAN.md).
+Next on the plan: Redis, agents, Docker - see [LEARNING_PLAN.md](docs/LEARNING_PLAN.md).
 
 Also: [Theory](docs/theory/README.md) · [Ed Donner map](docs/sources/ed-donner.md) · [Gradio hub](docs/gradio-hub.md) · [CONTINUE](docs/CONTINUE.md)
 
@@ -103,7 +103,7 @@ npm run check:12
 2. Prompt = rules. Validation = **your code** (Pydantic, whitelist).
 3. Retrieve first (catalog or docs), then generate.
 4. Chunking → vector store → say “don’t know” if it’s not in context.
-5. LangChain after your own RAG — not instead of it.
+5. LangChain after your own RAG - not instead of it.
 
 ---
 
@@ -113,10 +113,10 @@ npm run check:12
 No. Focus is application engineering: schemas, tools, retrieval, APIs.
 
 **Do I need GigaChat?**  
-Lessons 01–02 expect it. Local path starts at 03 (Ollama).
+Lessons 01-02 expect it. Local path starts at 03 (Ollama).
 
 **Can I fork for a course / team?**  
-Yes. Educational repo — fork freely. Lecture ideas partly from Ed Donner (MIT) — see [sources](docs/sources/ed-donner.md).
+Yes. Educational repo - fork freely. Lecture ideas partly from Ed Donner (MIT) - see [sources](docs/sources/ed-donner.md).
 
 ---
 
@@ -130,4 +130,4 @@ PRs that fix checks, clarify docs, or add the next lesson from the plan are welc
 
 ---
 
-**If this sandbox helps — ⭐ the [repo](https://github.com/anatoly-kulishov/ship-ai-sandbox).**
+**If this sandbox helps - ⭐ the [repo](https://github.com/anatoly-kulishov/ship-ai-sandbox).**
