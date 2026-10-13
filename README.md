@@ -124,6 +124,10 @@ Yes. Educational repo — fork freely. Lecture ideas partly from Ed Donner (MIT)
 
 PRs that fix checks, clarify docs, or add the next lesson from the plan are welcome.
 
+## License
+
+[MIT](LICENSE)
+
 ---
 
 **If this sandbox helps — ⭐ the [repo](https://github.com/anatoly-kulishov/ship-ai-sandbox).**
