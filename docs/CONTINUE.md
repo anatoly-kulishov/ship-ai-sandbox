@@ -1,6 +1,6 @@
 # Контекст для нового чата · продолжаем учиться
 
-Дата снимка: **2026-10-12**. Открой этот файл в новом чате и скажи: «продолжай по `docs/CONTINUE.md`».
+Дата снимка: **2026-10-19**. Открой этот файл в новом чате и скажи: «продолжай по `docs/CONTINUE.md`».
 
 ---
 
@@ -44,12 +44,16 @@ npm run 12          # :8602
 
 ## Дальше
 
+Ориентир вакансии: [hh · GenAI Evaluation](https://spb.hh.ru/vacancy/138480763). Детали в фазе G [`LEARNING_PLAN.md`](./LEARNING_PLAN.md).
+
 | Приоритет | Тема |
 |---|---|
-| 1 | Redis (кэш эмбеддингов / rate limit) |
-| 2 | Agents (фаза E; теория в `theory/06`) |
-| 3 | Docker compose gateway+Postgres |
-| 4 | Прод: Vercel secrets |
+| 1 | **G · golden set** на Fitllm RAG (урок 20): 20-30 вопросов, source, pass/fail |
+| 2 | LLM-as-Judge + сверка с ручной пометкой |
+| 3 | DeepEval-сьют и трейс в Langfuse |
+| 4 | Сравнение двух провайдеров на одном сете |
+| 5 | Потом agents + LangGraph, Redis, Docker, pgvector или Qdrant |
+| 6 | Прод: Vercel secrets |
 
 ---
 
@@ -57,6 +61,6 @@ npm run 12          # :8602
 
 ```text
 Продолжаем по docs/CONTINUE.md в ship-ai-sandbox.
-Уроки 01–12 закрыты (Postgres events есть).
-Следующий шаг: Redis или agents — один навык.
+Уроки 01–12 закрыты. Следующий шаг один: урок 20, golden set для Fitllm RAG (фаза G, GenAI Evaluation).
+Не Redis и не agents, пока нет первого eval-контура.
 ```

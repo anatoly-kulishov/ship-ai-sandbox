@@ -131,6 +131,9 @@
 | Error handling LLM | `обработка ошибок LLM API` | `LLM API error handling retries` |
 | Langfuse / tracing | `Langfuse туториал` | `Langfuse tutorial LLM` |
 | LLM-as-a-Judge | `LLM as a judge` | `LLM-as-a-judge evaluation` |
+| DeepEval | `DeepEval RAG тест` | `DeepEval tutorial RAG` |
+| Human evaluation | `разметка качества ответов LLM` | `human evaluation LLM rubric` |
+| Golden dataset | `golden dataset RAG evaluation` | `LLM regression test dataset` |
 
 ---
 
@@ -143,6 +146,7 @@
 | ReAct | `ReAct agent LLM` | `ReAct prompting agents` |
 | AI agents | `AI агенты LangChain` | `LangChain agents tutorial` |
 | Multi-agent (обзор) | `multi agent LLM обзор` | `multi agent systems LLM overview` |
+| LangGraph | `LangGraph туториал` | `LangGraph tutorial RAG agent` |
 
 ---
 

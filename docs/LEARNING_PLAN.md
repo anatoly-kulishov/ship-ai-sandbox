@@ -32,7 +32,7 @@
 | Модели | облако (OpenAI-совместимое) **и** local (Ollama) | must |
 | Данные | **PostgreSQL**, часто Redis | must |
 | Delivery | **Docker**, compose; K8s — база | must / plus |
-| Качество | evals, анти-галлюцинации, tracing (Langfuse) | must |
+| Качество | golden set, faithfulness, LLM-as-Judge, DeepEval, Langfuse, regression | must (вакансии GenAI Evaluation) |
 | Fine-tune | LoRA/QLoRA — обзор + один мини-опыт | plus → часто must на Middle+ |
 | Heavy MLOps | Airflow, Kafka, Spark, Triton | **не в среднем плане** (фаза «После рынка») |
 
@@ -43,6 +43,7 @@
 | GenAI / Python LLM (Neuro.net и аналоги) | **высокий** |
 | AI/LLM Engineer on-prem (РЖД и аналоги) | **высокий** |
 | Product AI / AI Application Engineer | **высокий** |
+| GenAI Evaluation (hh и аналоги: бенчмарки, judge, observability) | **высокий**, если закрыта фаза G |
 | ML/AI Engineer fintech (WB-like) | **средний** → нужна фаза «После» |
 | Research / Core LLM training | низкий (другая профессия) |
 
@@ -182,7 +183,8 @@ User ──► FastAPI (async) ──┤
 |---|---|---|
 | 10 | Chunking + overlap | **09-chunking/** + [theory/04](./theory/04-chunking.md) |
 | 11 | Embeddings + cosine | **05-rag/** top-k по brief зала |
-| 12 | Vector DB: **Chroma** (старт) → позже Qdrant/pgvector | **10-chroma-rag/** |
+| 12 | Vector DB: **Chroma** (старт) | **10-chroma-rag/** |
+| 12b | Второй store из вакансий: **pgvector или Qdrant** (один) | тот же retrieve, умеешь назвать отличие от Chroma |
 | 13 | Full RAG + citations + «не знаю» | **10** ask по Fitllm KB |
 | 14 | LangChain **или** LlamaIndex | **11-langchain-rag/** |
 
@@ -197,10 +199,11 @@ User ──► FastAPI (async) ──┤
 - ReAct: мысль → tool → наблюдение → ответ
 - 2–3 tools: поиск по базе, сохранить заметку, калькулятор/HTTP
 
-### Урок 16 · Multi-step assistant
+### Урок 16 · Multi-step assistant + LangGraph
 
 - Один сценарий «помощник по документам + запись задачи»
-- Без фанатизма multi-agent frameworks
+- Тот же сценарий как граф **LangGraph** (2-3 узла: retrieve → tools → answer)
+- Без зоопарка из пяти agent-фреймворков. LangGraph нужен, потому что его прямо пишут в вакансиях рядом с LangChain
 
 **Срок:** 3–5 недель.
 
@@ -218,15 +221,27 @@ User ──► FastAPI (async) ──┤
 
 ---
 
-## Фаза G · Качество и наблюдаемость
+## Фаза G · GenAI Evaluation (приоритет сразу после RAG)
 
-| Урок | Тема | Готово |
+Ориентир: [AI/LLM Engineer в GenAI Evaluation, HeadHunter](https://spb.hh.ru/vacancy/138480763) (Москва, октябрь 2026). Роль ставит **evaluation-driven** процесс: бенчмарки, метрики, LLM-as-Judge, observability. Чат и RAG здесь уже предполагаются готовыми.
+
+База для упражнений: Fitllm RAG из уроков 10–11. Один golden set гоняется снова при смене chunk size, модели или промпта.
+
+| Урок | Тема | Готово, когда |
 |---|---|---|
-| 20 | Evals: 30 вопросов, pass/fail, faithfulness | регрессия при смене chunk size |
-| 21 | Tracing: Langfuse (или аналог) | видишь prompt/completion/latency |
-| 22 | Security basics | API key, маскирование, «данные не утекают» в README |
+| 20 | Golden set | 20-30 вопросов по базе Fitllm: вопрос, ожидаемый факт, `source`. Версии датасета в git |
+| 21 | Offline-метрики | faithfulness, попадание retrieve, pass/fail. Смена `chunk_size` двигает отчёт |
+| 22 | LLM-as-Judge | рубрика отдельно от генератора. На 5 кейсах judge сравнивается с твоей ручной пометкой |
+| 23 | Human eval (мини) | таблица: верно / частично / выдумка. Понимаешь, зачем человек, если judge уже есть |
+| 24 | DeepEval | один тест-сьют на RAG, запускается как `check`, а не только ноутбук |
+| 25 | Langfuse | в трейсе видны prompt, retrieved chunks, completion, latency |
+| 26 | Сравнение моделей | один golden set на двух провайдерах (Ollama и облако), короткий diff-отчёт |
+| 27 | Agent eval | после фазы E: оцениваешь траекторию tool calls, не только финальный текст |
+| 28 | Security basics | API key, маскирование, «данные не утекают» в конспекте |
 
-**Срок:** 3–5 недель.
+Плюсы той же вакансии, не блокер среднего плана: Java, обучение LLM с нуля, онлайн A/B на живом трафике. A/B на промптах достаточно понять на уровне идеи (см. YouTube-запросы).
+
+**Срок:** 3-5 недель на уроки 20-26. Agent eval (27) после фазы E.
 
 ---
 
@@ -236,9 +251,9 @@ User ──► FastAPI (async) ──┤
 
 | Урок | Тема | Готово |
 |---|---|---|
-| 23 | Hugging Face Transformers (load + generate) | прогнал модель локально/в колабе |
-| 24 | LoRA / QLoRA: один маленький датасет | дообучил tiny-модель, сравнил до/после |
-| 25 | Когда fine-tune, а когда RAG/prompt | чёткое правило в конспекте |
+| 29 | Hugging Face Transformers (load + generate) | прогнал модель локально/в колабе |
+| 30 | LoRA / QLoRA: один маленький датасет | дообучил tiny-модель, сравнил до/после |
+| 31 | Когда fine-tune, а когда RAG/prompt | чёткое правило в конспекте |
 
 **Срок:** 3–6 недель.
 
@@ -253,10 +268,11 @@ User ──► FastAPI (async) ──┤
 3. Tools / простой agent  
 4. Переключение cloud ↔ Ollama  
 5. docker-compose  
-6. 20–30 eval-кейсов  
-7. Короткое демо 2–3 мин  
+6. Golden set + faithfulness + LLM-as-Judge (DeepEval)  
+7. Трейс в Langfuse  
+8. Короткое демо 2–3 мин  
 
-Этого хватает на **большинство** GenAI/LLM Application вакансий.
+Для вакансий **GenAI Evaluation** пункты 6–7 обязательны, не «потом».
 
 ---
 
@@ -270,7 +286,7 @@ User ──► FastAPI (async) ──┤
 | D RAG + LC/LI | 6–10 нед |
 | E Agents | 3–5 нед |
 | F Docker / UI | 4–6 нед |
-| G Evals / tracing | 3–5 нед |
+| G GenAI Evaluation | 3-5 нед, **сразу после D** |
 | H LoRA light | 3–6 нед |
 
 **Итого среднего плана: ~6–11 месяцев** спокойно.  
@@ -299,11 +315,12 @@ User ──► FastAPI (async) ──┤
 3. Каждый урок = папка + конспект `docs/NN-*.md` простым языком (зачем / как сделали / как работает) + коммит.  
 4. После урока: блок «что запомнить» в том же md.  
 5. Не прыгай в LoRA, пока нет RAG и FastAPI.
+6. После рабочего RAG следующий навык - **оценка качества** (фаза G), не новый фреймворк.
 
 ---
 
 ## Следующий шаг
 
-Закрепи Postgres: `npm run postgres:up` → `npm run check:12` → `check:12:llm`.
+**Фаза G, урок 20:** golden set на Fitllm RAG (уроки 10–11). Потом judge, DeepEval, Langfuse.
 
-Дальше: **Redis** (кэш/rate limit) или **agents** (фаза E).
+Redis, LangGraph и Docker остаются в плане, но идут после первого eval-контура.
